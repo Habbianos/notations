@@ -1,0 +1,30 @@
+# Draft Notes
+
+- https://www.habbo.com.br/habbo-imaging/badge/b14054t17194588827cea04fbc126834213eca4a3df3.gif
+  - `b14054t17194588827cea04fbc126834213eca4a3df3`
+  - `b14054`: base id 14, color 05, position 4
+  - `t17194`
+  - `588827cea04fbc126834213eca4a3df3`: hash, probably using MD5
+- https://www.habbo.com.br/habbo-imaging/badge/b12111s28094t57135t57133t57134737efc6b13dece0c259f7524daa13b88.gif
+  - `b12111s28094t57135t57133t57134737efc6b13dece0c259f7524daa13b88`
+  - `b12111`: base id 12, color 11, position 1
+  - `s28094`
+  - `t57135`
+  - `t57133`
+  - `t57134`
+  - `737efc6b13dece0c259f7524daa13b88`: hash, probably using MD5
+- https://www.habbo.com.br/habbo-imaging/badge/b11050s29175s39083s32201t22027c7bb67f555c343128c6ea3effd38e5de.gif
+  - `b11050s29175s39083s32201t22027c7bb67f555c343128c6ea3effd38e5de`
+  - `b11050`: base id 11, color 05, position 0
+  - `s29175`
+  - `s39083`
+  - `s32201`
+  - `t22027`
+  - `c7bb67f555c343128c6ea3effd38e5de`: hash, probably using MD5
+- https://www.habbo.com.br/habbo-imaging/badge/b24124s20017s20025s20023s20102b01bfc395d8c4be707922c3da5b3f561.gif
+  - `b24124`: base id 24, color 12, position 4
+  - `s20017`: element id 20, color 01, position 7
+  - `s20025`: element id 20, color 02, position 5
+  - `s20023`: element id 20, color 02, position 3
+  - `s20102`: element id 20, color 10, position 2
+  - `b01bfc395d8c4be707922c3da5b3f561`: hash, probably using MD5
