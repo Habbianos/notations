@@ -196,5 +196,5 @@ Though HAFN is purely textual, parsers **MUST**:
 
 - **v1.0.0 – 2025-04-07**
   - Initial draft of the Habbo Avatar Figure Notation (HAFN) specification.
-- **v1.0.0 – 2025-04-08**
+- **v1.0.1 – 2025-04-08**
   - Initial draft of the adicional elements section.
