@@ -1,13 +1,14 @@
 # **Habbo Avatar Figure Notation (HAFN) v1.0**
 
 - **Specification Status:** Draft  
-- **Date:** 2025-04-07
+- **Date:** 2025-04-12
+- **Available in:** English
 
 ## **1. Introduction**
 
 ### **1.1. Abstract**
 
-**Habbo Avatar Figure Notation (HAFN)** is a community-documented, text-based string notation designed to represent **Habbo avatar appearances** using compact, dot-separated codes. Each string encodes structured data that represents **figure parts, set IDs, and optional color IDs**, and it is based on the data exposed by the `figuredata` currently available.
+**Habbo Avatar Figure Notation (HAFN)** is a standard for the text-based string notation designed to represent **Habbo avatar appearances** using compact, dot-separated codes. Each string encodes structured data that represents **figure parts, set IDs, and optional color IDs**, and it is based on the data exposed by the `figuredata` currently available.
 
 While HAFN reflects how avatar figures are encoded in Habbo URLs and backend systems, it is **not an official Sulake notation**, and future changes may not be adopted by Sulake.
 
@@ -198,3 +199,5 @@ Though HAFN is purely textual, parsers **MUST**:
   - Initial draft of the Habbo Avatar Figure Notation (HAFN) specification.
 - **v1.0.1 – 2025-04-08**
   - Initial draft of the adicional elements section.
+- **v1.0.2 – 2025-04-12**
+  - Minor touches of the draft.

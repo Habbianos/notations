@@ -1,14 +1,14 @@
 # **Habbo Music Notation (HMN) v1.0**
 
 - **Specification Status:** Draft
-- **Date:** 2025-04-07
+- **Date:** 2025-04-12
 - **Available in:** English
 
 ## **1. Introduction**
 
 ### **1.1. Abstract**
 
-**Habbo Music Notation (HMN)** is a community-documented of the text-based notation designed to represent music compositions in the **Traxmachine** system of Habbo Hotel. It encodes structured data for **music layers, sample references, and durations** as a single-line string. While HMN reflects how Habbo Hotel interprets music tracks, it is not an official format, and future updates may not be adopted by Sulake.
+**Habbo Music Notation (HMN)** is a standard for the text-based notation designed to represent music compositions in the **Traxmachine** system of Habbo Hotel. It encodes structured data for **music layers, sample references, and durations** as a single-line string. While HMN reflects how Habbo Hotel interprets music tracks, it is not an official format, and future updates may not be adopted by Sulake.
 
 <div align=center><img src="../img/traxmachine.png"/></div>
 
@@ -197,3 +197,5 @@ While HMN is **purely textual** and **does not involve code execution**, parsers
   - Initial draft of the HMN specification.
 - **v1.0.1 – 2025-04-07**
   - Text revisions and final touches of the draft.
+- **v1.0.2 – 2025-04-12**
+  - Minor touches of the draft.
