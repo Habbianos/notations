@@ -1,7 +1,7 @@
-# **Habbo Avatar Figure Notation (HAFN) v1.0**
+# **Habbo Avatar Figure Notation (HAFN) v2.0**
 
 - **Specification Status:** Draft  
-- **Date:** 2025-04-12
+- **Date:** 2025-04-13
 - **Available in:** English
 
 ## **1. Introduction**
@@ -39,7 +39,7 @@ This document is aimed at developers, archivists, modders, and enthusiasts in th
 
 ## **2. Status of This Document**
 
-HAFN v1.0 defines the current known structure of Habbo avatar strings, based on the parsing behavior seen in Habbo Hotel and documented through the `figuredata` file.
+HAFN v2.0 defines the current known structure of Habbo avatar strings, based on the parsing behavior seen in Habbo Hotel and documented through the `figuredata` file.
 
 HAFN is **community-maintained**. While it matches current usage patterns, Sulake may change the format at any time. Future extensions will aim to preserve backward compatibility whenever possible.
 
@@ -195,9 +195,11 @@ Though HAFN is purely textual, parsers **MUST**:
 
 ### **Changelog**
 
-- **v1.0.0 – 2025-04-07**
+- **v2.0.0 – 2025-04-07**
   - Initial draft of the Habbo Avatar Figure Notation (HAFN) specification.
-- **v1.0.1 – 2025-04-08**
+- **v2.0.1 – 2025-04-08**
   - Initial draft of the adicional elements section.
-- **v1.0.2 – 2025-04-12**
+- **v2.0.2 – 2025-04-12**
   - Minor touches of the draft.
+- **v2.0.3 – 2025-04-13**
+  - Migrated from `v1` to `v2` to let the `v1` be the numeric-based notation.
