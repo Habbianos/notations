@@ -13,7 +13,7 @@
 While HGBN reflects the badge design definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
 
 <div align="center">
-  <img src="https://www.habbo.com.br/habbo-imaging/badge/b1001Xs05175s05173s12114164dc817408eb06f0268fb6ed7f3f045.gif" alt="Example Badge">
+  <img src="../img/editor-old.webp" alt="Example Badge">
 </div>
 
 ### **1.2. Scope and Intent**

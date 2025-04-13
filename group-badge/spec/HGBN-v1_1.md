@@ -13,7 +13,7 @@
 While HGBN reflects current badge design definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
 
 <div align="center">
-  <img src="../img/image.png" alt="Example Badge">
+  <img src="../img/editor-new.png" alt="Example Badge">
 </div>
 
 ### **1.2. Scope and Intent**
