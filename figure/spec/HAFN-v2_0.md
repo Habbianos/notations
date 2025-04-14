@@ -1,7 +1,7 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
 - **Specification Status:** Draft  
-- **Date:** 2025-04-13
+- **Date:** 2025-04-14
 - **Available in:** English
 
 ## **1. Introduction**
@@ -12,7 +12,7 @@
 
 While HAFN reflects how avatar figures are encoded in Habbo URLs and backend systems, it is **not an official Sulake notation**, and future changes may not be adopted by Sulake.
 
-<div align=center><img src="./img/habbo_avatar.png"/></div>
+<div align=center><img src="../img/wardrobe.png"/></div>
 
 ### **1.2. Scope and Intent**
 
@@ -30,6 +30,8 @@ HAFN is a textual representation of avatar configuration that enables:
 
 - Compact **single-line storage** of figure appearance.
 - Easy **parsing, generation, and validation** of figure strings.
+
+It **DOES NOT** include aditional elements such as avatar actions and visual effects, as described in [Section 9](#9-additional-elements).
 
 ### **1.3. Audience**
 
@@ -55,7 +57,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 A system is **HAFN-compliant** if it:
 
-- Properly parses and validates HAFN strings according to the structure in Section 5.
+- Properly parses and validates HAFN strings according to the structure in [Section 5](#5-syntax-definition).
 - Resolves part types, set IDs, and color IDs against a valid `figuredata` structure.
 - Rejects invalid strings or identifiers not defined in the current figuredata.
 
@@ -117,21 +119,43 @@ Each part is separated by a **dot (`.`)**. The parser **MUST**:
 
 ## **7. Example Entries**
 
-### **7.1. Simple Avatar**
+### **7.1. Basic Example**
 
 ```txt
-hr-802-40.hd-180-1.ch-3237-1408-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3874-1428-110
+hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408
 ```
+
+![Avatar Image of `alynva` in `hhus`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408)
 
 **Explanation:**
 
-- `hr-802-40` → Hair, set ID 802, color 40
-- `hd-180-1` → Head, set ID 180, color 1
-- `ch-3237-1408-1408` → Chest, set 3237, dual color 1408
-- `lg-3023-64` → Legs, set 3023, color 64
-- `sh-3068-1408-64` → Shoes, set 3068, primary color 1408, secondary 64
-- `ea-1403-1408` → Ears, set 1403, color 1408
-- `cc-3874-1428-110` → Carrying, set 3874, colors 1428 and 110
+- `hr-890-45` → Hair, set ID 890, color 45  
+- `hd-600-10` → Head, set ID 600, color 10  
+- `ch-665-1408` → Shirt (chest), set 665, color 1408  
+- `lg-716-1408-1408` → Pants (legs), set 716, dual color 1408  
+
+### **7.2. Complete Example**
+
+```txt
+hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-64-1408.cp-3284-64
+```
+
+![Avatar Image of `alynva` in `hhus`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-64-1408.cp-3284-64)
+
+**Explanation:**
+
+- `hr-802-37` → Hair, set ID 802, color 37  
+- `hd-180-1` → Head, set ID 180, color 1  
+- `ch-3030-1408` → Shirt, set 3030, color 1408  
+- `lg-3023-64` → Pants, set 3023, color 64  
+- `sh-3068-1408-64` → Shoes, set 3068, primary color 1408, secondary 64  
+- `ea-1403-1408` → Glasses, set 1403, color 1408  
+- `cc-3280-64-1408` → Coat, set 3280, primary color 64, secondary 1408  
+- `cp-3284-64` → Print, set 3284, color 64  
+
+### **7.3. Other Examples**
+
+![Avatar Image of `alynva` in `hhbr`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-802-40.hd-180-1.ch-3030-1408.lg-3023-64.sh-4159-64-1408.ha-3843-1408-64.ea-3484.cc-4184-64-1408.cp-3284-64) ![Avatar Image of `SweetLiah` in `hhbr`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-4182-45-45.hd-627-10.ch-3836-73-73.lg-3216-64.ha-3843-73-64.cc-6077) ![Avatar Image of `GuReiPanda` in `hhbr`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-5556-61-45.hd-3997-1.ch-3669-110-110.lg-3058-110.sh-725-110.ea-3577.fa-3344-110.ca-5934-92.cc-5942-110.cp-3311-110) ![Avatar Image of `sirjonasxxx`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-3436-61-40.hd-180-1390.ch-3077-110-92.lg-280-110.sh-295-92.ha-3242-110-92.he-1608.ea-5007.fa-1206-110) ![Avatar Image of `matheusferraz` in `hhbr`](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-3163-39.hd-3091-8.ch-5201.lg-3058-1426.sh-5639.ha-5417.he-5828.ea-1406.ca-5571-96.cc-5611-96)
 
 ---
 
@@ -149,7 +173,7 @@ hr-802-40.hd-180-1.ch-3237-1408-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-
 
 ## **9. Additional Elements**
 
-There are other aspects related to the avatar figure that are **not** covered by this specification, such as clothing items that uses multiple parts, avatar actions (e.g., laying, sitting, waving, dancing), and visual effects. These elements are not present in the notation itself and should be considered purely **informative**, they do **not** define or alter the notation in any way.
+There are other aspects related to the avatar figure that are **not** covered by this specification, such as clothing items that uses multiple parts, avatar actions (e.g., laying, sitting, waving, dancing), and visual effects. These elements are not present in the notation itself and should be considered as purely **informative** in this document, they do **not** define or alter the notation in any way.
 
 Below are links to relevant data sources used to compute or render these elements. Further documentation may be written to explain them in more detail:
 
@@ -173,7 +197,7 @@ All changes will be versioned appropriately.
 
 ## **11. Security Considerations**
 
-Though HAFN is purely textual, parsers **MUST**:
+While HAFN is **purely textual** and **does not involve code execution**, parsers MUST:
 
 - Sanitize inputs
 - Prevent malformed strings from causing **buffer overflows** or **injection**
@@ -203,3 +227,7 @@ Though HAFN is purely textual, parsers **MUST**:
   - Minor touches of the draft.
 - **v2.0.3 – 2025-04-13**
   - Migrated from `v1` to `v2` to let the `v1` be the numeric-based notation.
+- **v2.0.4 - 2024-04-14**
+  - Added the wardrobe image.
+  - Completed the example section.
+  - Minor touches of the draft.
