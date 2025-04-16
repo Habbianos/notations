@@ -4,6 +4,10 @@
 - **Date:** 2025-04-12
 - **Available in:** English
 
+<details><summary>Table of Contents</summary>
+<div class="js-toc"></div>
+</details>
+
 ## **1. Introduction**
 
 ### **1.1. Abstract**

@@ -4,6 +4,8 @@
 - **Date:** 2025-04-12
 - **Available in:** English
 
+<div class="js-toc"></div>
+
 ## **1. Introduction**
 
 ### **1.1. Abstract**
