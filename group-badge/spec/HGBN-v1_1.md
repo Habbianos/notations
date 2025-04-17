@@ -1,18 +1,20 @@
 # **Habbo Group Badge Notation (HGBN) v1.1**
 
 - **Specification Status:** Draft
-- **Date:** 2025-04-12
+- **Date:** 2025-04-17
 - **Available in:** English
 
+<details><summary>Table of Contents</summary>
 <div class="js-toc"></div>
+</details>
 
 ## **1. Introduction**
 
 ### **1.1. Abstract**
 
-**Habbo Group Badge Notation (HGBN)** is standard for the text-based notation designed to represent group badges within the Habbo ecosystem. HGBN encodes structured badge data as a single string composed of multiple six-character segments. Each segment defines either a base image asset or a symbol overlay, including data about the asset id, tint color, and its placement on a 3×3 grid.
+**Habbo Group Badge Notation (HGBN) v1** is standard for the text-based notation designed to represent group badges within the Habbo ecosystem. HGBN encodes structured badge data as a single string composed of multiple six-character segments. Each segment defines either a base image asset or a symbol overlay, including data about the asset id, tint color, and its placement on a 3×3 grid.
 
-While HGBN reflects current badge design definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
+While HGBN v1 reflects current badge design definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
 
 <div align="center">
   <img src="../img/editor-new.png" alt="Example Badge">
@@ -22,17 +24,16 @@ While HGBN reflects current badge design definition, it is not an official forma
 
 #### **1.2.1. This Document**
 
-HGBN was created by the community to formally document how Habbo Hotel processes **group badge components**. It is:
+This specification exists to formalize and document how Habbo Hotel processes **group badge components**. It is:
 
 - **An unofficial specification**, meaning Sulake may not adopt updates.
 - **Meant for documentation and interoperability**, allowing developers to parse, generate, and manipulate group badges outside the game.
 
 HGBN is **not a standard maintained by Sulake**, and its future extensions **MAY NOT** be reflected in the game's implementation.
 
-
 #### **1.2.2. The Notation**
 
-HGBN is a textual representation of layered symbols designed for:
+HGBN v1 is a textual representation of layered symbols designed for:
 
 - **Storing badge configurations** as a compact text string
 - **Programmatic parsing and generation** by developers and researchers
@@ -42,15 +43,21 @@ HGBN is a textual representation of layered symbols designed for:
 
 This specification is intended for developers, researchers, archivists, and enthusiasts involved in the Habbo Hotel community, particularly those working on tools for Habbo group badges. It also serves as a common reference for understanding, implementing, and manipulating the Habbo Group Badge Notation (HGBN), which can be used for tasks such as developing interoperable software, emulators, and documentation for fan-driven projects. The audience also includes data scientists who may utilize this notation in image-related research or analysis. Familiarity with basic programming concepts, string manipulation, and image manipulation is recommended but not required.
 
+---
+
 ## **2. Status of This Document**
 
-This document defines HGBN v1.1, the oficial and original way of how group badges design are stored. HGBN is a **community-maintained** standard, and while efforts are made to ensure accuracy, there is **no guarantee that Sulake will adopt future revisions**.
+HGBN v1.1 defines the current known structure for how group badge designs are stored, based on the original implementation in Habbo Hotel.
 
-Future updates may introduce **non-official extensions** that extend HGBN beyond the game's native capabilities. Backward compatibility is not guaranteed.
+HAFN is **community-maintained**. While efforts are made to ensure accuracy, Sulake may change the format at any time. Future extensions will aim to preserve backward compatibility whenever possible.
+
+---
 
 ## **3. Normative Language**
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
+
+---
 
 ## **4. Conformance**
 
@@ -66,18 +73,20 @@ A valid HGBN string **MUST**:
 2. Use correct data formatting (segment identifiers, fixed-length numbers, and position digits).
 3. Ensure that the asset ids and color ids are exactly two digits each, and the position is a single digit representing a 3×3 grid value.
 
+---
+
 ## **5. Syntax Definition**
 
 ### **5.1. Overview**
 
-A HGBN string represents a complete badge by concatenating multiple six-character segments. The string is always ordered starting with the asset that should be at the bottom (base, identified by `b`), followed by the assets on top (symbols, identified by `s` or `t`).
+A HGBN v1 string represents a complete badge by concatenating multiple six-character segments. The string is always ordered starting with the asset that should be at the bottom (base, identified by `b`), followed by the assets on top (symbols, identified by `s` or `t`).
 
 > ![NOTE]
 > The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**.
 
 ### **5.2. Grammar**
 
-The following Extended Backus-Naur Form (EBNF) defines the syntax of HGBN:
+The following Extended Backus-Naur Form (EBNF) defines the syntax of HGBN v1.1:
 
 ```ebnf
 <hgbn>           ::= <baseSegment><symbolSegment>+
@@ -96,17 +105,19 @@ The following Extended Backus-Naur Form (EBNF) defines the syntax of HGBN:
 | Field       | Type      | Format                    | Description                                                                              |
 |-------------|-----------|---------------------------|------------------------------------------------------------------------------------------|
 | `segmentId` | Character | `b`, `s`, or `t`          | `b` indicates a base segment; `s` or `t` indicates a symbol segment.                     |
-| `assetId`   | Integer   | Two digits (00-99)        | Identifier for the image asset.                                                        |
-| `colorId`   | Integer   | Two digits (00-99)        | Color tint identifier for the asset.                                                   |
-| `position`  | Integer   | One digit (0-8)           | Position on a 3×3 grid where the element is placed.                                     |
+| `assetId`   | Integer   | Two digits (00-99)        | Identifier for the image asset.                                                          |
+| `colorId`   | Integer   | Two digits (00-99)        | Color tint identifier for the asset.                                                     |
+| `position`  | Integer   | One digit (0-8)           | Position on a 3×3 grid where the element is placed.                                      |
 
 ### **5.4. Regular Expression (Simplified)**
 
-The following regular expression can be used to validate the general structure of an HGBN string:
+The following regular expression can be used to validate the general structure of an HGBN v1.1 string:
 
 ```regex
 /^(b\d{2}\d{2}[0-8])((s|t)\d{2}\d{2}[0-8]){0,4}$/
 ```
+
+---
 
 ## **6. Processing Model**
 
@@ -119,25 +130,27 @@ The following regular expression can be used to validate the general structure o
 ### **6.2. Rendering Considerations**
 
 - The **assetId** corresponds to a specific image asset stored in the system.
-- The **colorId** instructs how the asset image is tinted. Uncolorable portions of the asset remain unchanged.
+- The **colorId** instructs how the asset image is tinted. Uncolorable portions (mask) of the asset remain unchanged.
 - The **position** value, within a 3×3 grid (positions 0-8), determines where the asset is placed. Implementations **MUST** render the asset at the corresponding grid cell. The asset **MUST NOT** overflow the badge area.
 
 ### **6.3. Error Handling**
 
-| Error Code                 | Description                                                |
-|----------------------------|------------------------------------------------------------|
-| **ERR_ASSET_ID_RANGE**     | `assetId` is not a two-digit number between 00 and 99.     |
-| **ERR_COLOR_ID_RANGE**     | `colorId` is not a two-digit number between 00 and 99.     |
-| **ERR_INVALID_POSITION**   | `position` is not a digit between 0 and 8.                 |
+| Error Code                 | Description                                                 |
+|----------------------------|-------------------------------------------------------------|
+| **ERR_ASSET_ID_RANGE**     | `assetId` is not a two-digit number between 00 and 99.      |
+| **ERR_COLOR_ID_RANGE**     | `colorId` is not a two-digit number between 00 and 99.      |
+| **ERR_INVALID_POSITION**   | `position` is not a digit between 0 and 8.                  |
 | **ERR_SYNTAX**             | The badge string is missing required segments or delimiters.|
 
 An HGBN-compliant parser **MUST** reject invalid strings and report an appropriate error.
+
+---
 
 ## **7. Example Entries**
 
 ### **7.1. Basic Example**
 
-Consider the following example HGBN string (without the trailing hash):
+Consider the following example HGBN v1.1 string (without the trailing hash):
 
 ```txt
 b12134s47114s46114s48114s45114
@@ -145,15 +158,13 @@ b12134s47114s46114s48114s45114
 
 [![Badge for `Brinquedoteca Academia Wired` from `hhbr`](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png)](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
 
-Explanation:
+**Explanation:**
 
-- **Base Segment:**
-  - `b12134` → Base with asset id `12`, color id `13`, at grid position `4`.
-- **Symbol Segments:**
-  - `s47114` → Symbol with asset id `47`, color id `11`, at grid position `4`.
-  - `s46114` → Symbol with asset id `46`, color id `11`, at grid position `4`.
-  - `s48114` → Symbol with asset id `48`, color id `11`, at grid position `4`.
-  - `s45114` → Symbol with asset id `45`, color id `11`, at grid position `4`.
+- `b12134` → Base with asset id `12`, color id `13`, at grid position `4`.
+- `s47114` → Symbol with asset id `47`, color id `11`, at grid position `4`.
+- `s46114` → Symbol with asset id `46`, color id `11`, at grid position `4`.
+- `s48114` → Symbol with asset id `48`, color id `11`, at grid position `4`.
+- `s45114` → Symbol with asset id `45`, color id `11`, at grid position `4`.
 
 ### **7.2. Complete Example**
 
@@ -162,20 +173,21 @@ A badge with both `s` and `t` symbol types could be specified as:
 ```txt
 b12063s78110t00118t27114
 ```
+
 [![Badge for `Central Academia Wired` from `hhbr`](https://www.habbo.com.br/habbo-imaging/badge/b12063s78110t00118t27114b28267b614ceae7f67b62007c901dbe2.png)](https://www.habbo.com.br/api/public/groups/g-hhbr-77d66c05a0d7373a02f17f0cd937115c)
 
-Explanation:
+**Explanation:**
 
-- **Base Segment:**
-  - `b12063` → Base with asset id `12`, color id `06`, at grid position `3`.
-- **Symbol Segments:**
-  - `s78110` → Symbol with asset id `78`, color id `11`, at grid position `0`.
-  - `t00118` → Symbol with asset id `00` (type `t`), color id `11`, at grid position `8`.
-  - `t27114` → Symbol with asset id `20` (type `t`), color id `11`, at grid position `4`.
+- `b12063` → Base with asset id `12`, color id `06`, at grid position `3`.
+- `s78110` → Symbol with asset id `78`, color id `11`, at grid position `0`.
+- `t00118` → Symbol with asset id `00` (type `t`), color id `11`, at grid position `8`.
+- `t27114` → Symbol with asset id `20` (type `t`), color id `11`, at grid position `4`.
 
 ### **7.3. Other Examples**
 
 ![`Ajudantes Habbo Oficiais`](https://www.habbo.com.br/habbo-imaging/badge/b27124s02113s85094fff2f2c95774f5852db11d2d05c57edc.png) ![`— Toque Piano —`](https://www.habbo.com.br/habbo-imaging/badge/b01114t36137t38130t371388462b6475c5fd8bcdf24285423b9a3f1.png) ![`A Viagem de Chihiro`](https://www.habbo.com.br/habbo-imaging/badge/b01164t21027t21034t21071cd17bc78d5559983bd4c8acbc69bd619.png) ![`LAR REGRADO`](https://www.habbo.com.br/habbo-imaging/badge/b01014s86137s861316812278842b21c2572744276d186bf11.png) ![`.`](https://www.habbo.com.br/habbo-imaging/badge/b22104t15101d8ae27b79156fa62889bc0f0639b51f2.png) ![`FlyFood Game`](https://www.habbo.com.br/habbo-imaging/badge/b22134s63117s83104t07013s65025ce89139b78df89a96522084130c161ce.png) ![`Gartic - Desenhe palavras`](https://www.habbo.com.br/habbo-imaging/badge/b20244t40112s05108s05017s0506646909025237657d2cb74b1ce2139b664.png)
+
+---
 
 ## **8. Extensibility and Future Work**
 
@@ -186,6 +198,8 @@ Possible future extensions of HGBN **MAY** include:
 3. **Positional Enhancements:** Defining more granular placements or layering priorities beyond the basic 3×3 grid.
 
 Revisions to the specification **SHALL** be versioned appropriately, and backward compatibility **MAY** be maintained where possible.
+
+---
 
 ## **9. Security Considerations**
 
@@ -446,8 +460,8 @@ The following tables list the approved asset mappings. Implementers and develope
 
 ## **11. References**
 
-- [Habbo Groups API](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
-- [Habbo Group Badge Render Service](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (also avaliable as `.gif` and from `badge-fill` for non-transparent background)
+- *[Habbo Groups API](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)*
+- *[Habbo Group Badge Render Service](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (also avaliable as `.gif` and from `badge-fill` for non-transparent background)*
 
 ---
 
@@ -458,3 +472,6 @@ The following tables list the approved asset mappings. Implementers and develope
   - Filling the reference tables.
   - Fixing the zero-indexed position ids.
   - Final touches of the draft.
+- **v1.1.1 - 2025-04-17**
+  - Standardizing the spec structure.
+  - Minor touches of the draft.

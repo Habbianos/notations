@@ -1,7 +1,7 @@
 # **Habbo Music Notation (HMN) v1.0**
 
 - **Specification Status:** Draft
-- **Date:** 2025-04-12
+- **Date:** 2025-04-17
 - **Available in:** English
 
 <details><summary>Table of Contents</summary>
@@ -12,7 +12,9 @@
 
 ### **1.1. Abstract**
 
-**Habbo Music Notation (HMN)** is a standard for the text-based notation designed to represent music compositions in the **Traxmachine** system of Habbo Hotel. It encodes structured data for **music layers, sample references, and durations** as a single-line string. While HMN reflects how Habbo Hotel interprets music tracks, it is not an official format, and future updates may not be adopted by Sulake.
+**Habbo Music Notation (HMN) v1** is a standard for the text-based notation designed to represent music compositions in the **Traxmachine** system of Habbo Hotel. It encodes structured data for **music layers, sample references, and durations** as a single-line string.
+
+While HMN v1 reflects how Habbo Hotel interprets music tracks, it is **not an official Sulake notation**, and future changes may not be adopted by Sulake.
 
 <div align=center><img src="../img/traxmachine.png"/></div>
 
@@ -20,29 +22,27 @@
 
 #### **1.2.1. This Document**
 
-HMN was created by the community to formally document how Habbo Hotel processes **Traxmachine music encoding**. It is:
+This specification exists to formalize and document how Habbo encodes **Traxmachine music** for storing purposes. It is:
 
-- **An unofficial specification**, meaning Sulake may not adopt updates.
-- **Meant for documentation and interoperability**, allowing developers to parse, generate, and manipulate Traxmachine sequences outside the game.
-
-HMN is **not a standard maintained by Sulake**, and its future extensions **MAY NOT** be reflected in the game's implementation.
+- **An unofficial community-maintained specification**.
+- Intended for developers and hobbyists building tools to **parse, generate, and manipulate** Traxmachine music outside the game.
 
 #### **1.2.2. The Notation**
 
-HMN is a textual representation of layered musical data designed for:
+HMN v1 is a textual representation of layered musical data that enables:
 
 - **Ease of storing** music compositions as a **text string** in databases
 - **Programmatic** parsing and generation.
 
 ### **1.3. Audience**
 
-This specification is intended for developers, researchers, archivists, and enthusiasts involved in the Habbo Hotel community, particularly those working on tools for music playback, preservation, and analysis of Traxmachine compositions. It also serves as a common reference for understanding, implementing, and manipulating the Habbo Music Notation (HMN), which can be used for tasks such as developing interoperable software, emulators, and documentation for fan-driven projects. The audience also includes data scientists who may utilize this notation in music-related research or analysis. Familiarity with basic programming concepts, string manipulation, and digital audio representation is recommended but not required.
+This document is aimed at developers, researchers, archivists, and enthusiasts involved in the Habbo Hotel community, particularly those working on tools for music playback, preservation, and analysis of Traxmachine compositions. It also serves as a common reference for understanding, implementing, and manipulating the Habbo Music Notation (HMN), which can be used for tasks such as developing interoperable software, emulators, and documentation for fan-driven projects. The audience also includes data scientists who may utilize this notation in music-related research or analysis. Familiarity with basic programming concepts, string manipulation, and digital audio representation is recommended but not required.
 
 ## **2. Status of This Document**
 
-This document defines HMN v1.0, the oficial and original way of how Traxmachine stores music compositions. HMN is a **community-maintained** standard, and while efforts are made to ensure accuracy, there is **no guarantee that Sulake will adopt future revisions**.
+HMN v1.0 defines the a known structure for how Traxmachine music compositions used to be stored, based on the original implementation in Habbo Hotel.
 
-Future updates may introduce **non-official extensions** that extend HMN beyond the game's native capabilities. Backward compatibility is not guaranteed.
+HMN is a **community-maintained**. While efforts are made to ensure accuracy, Sulake may change the format at any time. Future extensions will aim to preserve backward compatibility whenever possible.
 
 ## **3. Normative Language**
 
@@ -53,12 +53,12 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 An implementation is considered HMN v1.0 compliant if it adheres to the syntax, processing rules, and constraints defined in this document. A conforming parser implementation:
 
 - **MUST** support at least **four layers** and **sample IDs up to 648**
-- **MUST** reject the entry if strings violates structural rules or value constraints.
+- **MUST** reject any strings that violates structural rules or value constraints.
 - **MAY** extend functionality, but such extensions **MUST NOT** interfere with core compliance.
 
-A valid HMN entry **MUST**:
+A valid HMN v1.0 string **MUST**:
 
-1. Follow the **syntax definition** in Section 5.
+1. Follow the **syntax definition** in [Section 5](#5-syntax-definition).
 2. Maintain **correct data formatting** (colons, semicolons, and numbers).
 3. **Not exceed** the specified **sample ID range** (0-648).
 4. Ensure that durations are **positive integers up to 150** and **multiples of its sample duration**.
@@ -69,20 +69,20 @@ A valid HMN entry **MUST**:
 
 ### **5.1. Overview**
 
-An HMN string represents a sequence of musical layers, each comprising a list of samples defined by identifiers and durations.
+An HMN v1 string represents a sequence of musical layers, each comprising a list of samples defined by identifiers and durations.
 
 ### **5.2. Grammar**
 
-An HMN file consists of **one or more layers**, each containing a sequence of **samples with durations**. The format is formally defined as follows:
+The following Extended Backus-Naur Form (EBNF) defines the syntax of HMN v1.0:
 
 ```ebnf
-<layerList> ::= <layer>+
-<layer> ::= <layerId> ":" <sampleList> ":"
-<layerId> ::= [1-4]
-<sampleList> ::= <sample> (";" <sample>)*
-<sample> ::= <sampleId> "," <duration>
-<sampleId> ::= 0 | <posIntUpTo648>
-<duration> ::= <posIntUpTo150>
+<layerList>   ::= <layer>+
+<layer>       ::= <layerId> ":" <sampleList> ":"
+<layerId>     ::= [1-4]
+<sampleList>  ::= <sample> (";" <sample>)*
+<sample>      ::= <sampleId> "," <duration>
+<sampleId>    ::= 0 | <posIntUpTo648>
+<duration>    ::= <posIntUpTo150>
 ```
 
 ### **5.3. Lexical Constraints**
@@ -95,7 +95,7 @@ An HMN file consists of **one or more layers**, each containing a sequence of **
 
 ### **5.4. Regular Expression (Simplified)**
 
-The following regular expression can be used to validate the general structure of an HMN entry:
+The following regular expression can be used to validate the general structure of an HMN v1.0 string:
 
 ```regex
 /^(?:(\d+):(?:(\d+),(\d+))(;(?:(\d+),(\d+)))*:)+$/
@@ -123,13 +123,24 @@ The following regular expression can be used to validate the general structure o
 - Durations **MUST** be in the range 1 to 150.
 - The duration **MUST** be a multiple of **(sample length ÷ 2)**.
 
+### **6.4. Error Handling**
+
+| Error Code               | Description                                      |
+|--------------------------|--------------------------------------------------|
+| **ERR_SAMPLE_ID_RANGE**  | `sampleId` is outside the valid range `0-648`.   |
+| **ERR_INVALID_DURATION** | `duration` is outside the valid range `1-150`.   |
+| **ERR_FORMAT_SYNTAX**    | Missing or misplaced delimiters (`:`, `;`, `,`). |
+| **ERR_EMPTY_LAYER**      | Layer is declared but contains no samples.       |
+
+An HMN-compliant parser **MUST** reject invalid files and return an appropriate error.
+
 ---
 
 ## **7. Example Entries**
 
 ### **7.1. Basic Example**
 
-The following is an example of a valid HMN string:
+The following is an example of a valid HMN v1.0 string:
 
 ```txt
 1:12,4;34,2;0,1;56,6:2:22,3;45,2;67,4:3:0,5;31,3;44,2:4:12,6;34,4:
@@ -150,22 +161,13 @@ This example is a more complex sequence from the music "Habbowood" by Michael Ba
 1:280,4;265,4;264,4;263,8;0,16:2:262,4;263,8;266,4;267,4;264,12;262,4:3:0,4;268,8;269,4;270,4;268,8;282,4;285,4:4:0,20;74,4;75,3;81,3;0,6:
 ```
 
----
+### **7.3. Other Examples**
 
-## **8. Error Handling**
-
-| Error Code               | Description                                      |
-|--------------------------|--------------------------------------------------|
-| **ERR_SAMPLE_ID_RANGE**  | `sampleId` is outside the valid range `0-648`.   |
-| **ERR_INVALID_DURATION** | `duration` is outside the valid range `1-150`.   |
-| **ERR_FORMAT_SYNTAX**    | Missing or misplaced delimiters (`:`, `;`, `,`). |
-| **ERR_EMPTY_LAYER**      | Layer is declared but contains no samples.       |
-
-An HMN-compliant parser **MUST** reject invalid files and return an appropriate error.
+Check more examples at [Traxmachine - Demos](https://traxmachine.com/demos).
 
 ---
 
-## **9. Extensibility and Future Work**
+## **8. Extensibility and Future Work**
 
 The following extensions **MAY** be introduced in future versions:
 
@@ -177,7 +179,7 @@ Future revisions will maintain backward compatibility wherever feasible, and suc
 
 ---
 
-## **10. Security Considerations**
+## **9. Security Considerations**
 
 While HMN is **purely textual** and **does not involve code execution**, parsers MUST:
 
@@ -189,9 +191,11 @@ While HMN is **purely textual** and **does not involve code execution**, parsers
 
 ---
 
-## **11. References**
+## **10. References**
 
+- *[Traxmachine](https://traxmachine.com/)*
 - *[Musics Archive - Habbianos](https://github.com/Habbianos/Traxmachine/blob/main/components/musics-archive/README.md)*
+- *[Habborator | Trax](http://www.habborator.org/trax/)*
 
 ---
 
@@ -202,4 +206,8 @@ While HMN is **purely textual** and **does not involve code execution**, parsers
 - **v1.0.1 – 2025-04-07**
   - Text revisions and final touches of the draft.
 - **v1.0.2 – 2025-04-12**
+  - Minor touches of the draft.
+- **v1.0.3 – 2025-04-17**
+  - Standardizing the spec structure.
+  - Moved the 'Error Handling' section to within the 'Processing Model' section.
   - Minor touches of the draft.
