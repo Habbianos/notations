@@ -35,7 +35,7 @@ HAFN v2 is a textual representation of avatar configuration that enables:
 - Compact **single-line storage** of figure appearance.
 - Easy **parsing, generation, and validation** of figure strings.
 
-It **DOES NOT** include aditional elements such as avatar actions and visual effects, as described in [Section 9](#9-additional-elements).
+It **DOES NOT** include aditional elements such as avatar actions and visual effects, as described in [Section 8](#8-additional-elements).
 
 ### **1.3. Audience**
 
