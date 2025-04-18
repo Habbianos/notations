@@ -12,7 +12,7 @@
 
 ### **1.1. Abstract**
 
-**Habbo Group Badge Notation (HGBN) v1** is standard for the text-based notation designed to represent group badges within the Habbo ecosystem. It encodes structured badge data as a single string composed of multiple six-character segments. Each segment defines either a base image asset or a symbol overlay, including data about the asset id, tint color, and its placement on a 3×3 grid.
+**Habbo Group Badge Notation (HGBN) v1** is a standard for the text-based notation designed to represent group badges within the Habbo ecosystem. It encodes structured badge data as a single string composed of multiple six-character segments. Each segment defines either a base image asset or a symbol overlay, including data about the asset id, tint color, and its placement on a 3×3 grid.
 
 While HGBN v1 reflects the badge design definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
 
@@ -47,7 +47,7 @@ This specification is intended for developers, researchers, archivists, and enth
 
 ## **2. Status of This Document**
 
-HGBN v1.0 defines the a known structure for how group badge designs used to be stored, based on the original implementation in Habbo Hotel.
+HGBN v1.0 defines the known structure for how group badge designs used to be stored, based on the original implementation in Habbo Hotel.
 
 HAFN is **community-maintained**. While efforts are made to ensure accuracy, Sulake may change the format at any time. Future extensions will aim to preserve backward compatibility whenever possible.
 
@@ -69,7 +69,7 @@ An implementation is considered HGBN v1.0 compliant if it adheres to the syntax,
 
 A valid HGBN string **MUST**:
 
-1. Follow the syntax definition in Section 5.
+1. Follow the syntax definition in [Section 5](#5-syntax-definition).
 2. Use correct data formatting (segment identifiers, fixed-length numbers, and position digits).
 3. Ensure that the asset ids and color ids are exactly two digits each, and the position is a single digit representing a 3×3 grid value (or `X` for the base).
 
@@ -260,3 +260,5 @@ Strict adherence to the syntax and processing guidelines is required for safe im
 - **v1.0.2 - 2025-04-17**
   - Standardizing the spec structure.
   - Minor touches of the draft.
+- **v1.0.3 - 2025-04-18**
+  - Minor grammar fixes.
