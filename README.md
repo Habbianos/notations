@@ -1,3 +1,5 @@
+# notations
+
 ## Areas Covered
 
 This repository documents various notations and data structures used in Habbo Hotel, including:
@@ -10,6 +12,8 @@ This repository documents various notations and data structures used in Habbo Ho
 
 Each section provides a comprehensive overview of the respective notations, including syntax definitions, examples, and processing models.
 
+---
+
 ## Versioning
 
 We follow a versioning strategy similar to [Semver](https://semver.org/), where a version is defined as `v[FORMAT].[EXTENSION].[REVISION]`. Changes are applied as follows:
@@ -19,3 +23,15 @@ We follow a versioning strategy similar to [Semver](https://semver.org/), where 
 - **REVISION** version is incremented when changes are made to the specification itself (e.g., clarifications, typo fixes, formatting) without modifying the notation's behavior or structure.
 
 This means that for referencing a notation, using only the `v[FORMAT].[EXTENSION]` version number is enough. Additional suffixes may be appended to indicate context-specific adaptations of the specification (e.g., unofficial extensions or environment-specific versions).
+
+---
+
+## Lifecycle
+
+Specifications evolve through several lifecycle stages, representing their maturity and readiness for implementation:
+
+1. **Exploratory**: The initial phase where ideas are collected, the scope is investigated, and relevant references are gathered. The document may be incomplete or unstructured. No implementation or formal review is expected at this stage. **Purpose:** Define intent, explore feasibility, and shape the problem space.
+2. **Draft**: A structured and developing version of the specification. The core features, syntax, and processing rules are being written and revised. Community feedback is encouraged, but the content is still subject to significant change. **Purpose:** Begin formalization of ideas into a working specification.
+3. **Candidate**: A mature draft that is believed to be complete and internally consistent. It is now ready for experimental or real-world implementation and review. Only minor refinements are expected before finalization. **Purpose:** Encourage testing and validation before final release.
+4. **Stable**: The specification is finalized, with confirmed implementations and no expected major changes. This is the recommended version for production use. **Purpose:** Mark the specification as reliable and complete.
+5. **Obsolete**: The specification is no longer recommended for use. It may have been replaced by a newer version or deprecated due to lack of relevance. **Purpose:** Inform users that the document is outdated or superseded.

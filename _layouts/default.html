@@ -85,9 +85,18 @@ details summary {
 
       <section>
 
-      {{ content }}
-
+        {{ content }}
+      
+        {% if site.github.repository_url and page.path %}
+          <p style="margin-top: 2em;">
+            <a href="{{ site.github.repository_url }}/edit/main/{{ page.path }}" target="_blank">
+              ✏️ Edit this page on GitHub
+            </a>
+          </p>
+        {% endif %}
+      
       </section>
+      
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}" target="_blank">{{ site.github.owner_name }}</a></p>

@@ -1,8 +1,8 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
-- **Specification Status:** Draft  
+- **Specification Status:** Candidate  
 - **Date:** 2025-04-17
-- **Available in:** English
+- **Available in:** English (original) | [Portuguese](./HAFN-v2_0-br.md) | [Spanish](./HAFN-v2_0-es.md)
 
 <details><summary>Table of Contents</summary>
 <div class="js-toc"></div>
