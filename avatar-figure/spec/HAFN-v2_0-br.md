@@ -2,7 +2,7 @@
 
 - **Status da Especificação:** Candidato  
 - **Data:** 2025-04-17
-- **Disponível em:** [Inglês (original)](./HAFN-v2_0.md) | Português | [Espanhol](./HAFN-v2_0-es.md)
+- **Disponível em:** [Inglês (original)](./HAFN-v2_0.md) • Português • [Espanhol](./HAFN-v2_0-es.md)
 
 <details><summary>Sumário</summary>
 <div class="js-toc"></div>

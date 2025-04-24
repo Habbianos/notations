@@ -1,8 +1,8 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
-- **Estado de la Especificación:** Borrador  
+- **Estado de la Especificación:** Borrador
 - **Fecha:** 2025-04-17
-- **Disponible en:** [Inglés (original)](./HAFN-v2_0.md) | [Portugués](./HAFN-v2_0-br.md) | Español
+- **Disponible en:** [Inglés (original)](./HAFN-v2_0.md) • [Portugués](./HAFN-v2_0-br.md) • Español
 
 <details><summary>Índice</summary>
 <div class="js-toc"></div>
@@ -164,9 +164,9 @@ hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408
 **Explicación:**
 
 - `hr-890-45` → Cabello, set ID `890`, color `45`
-- `hd-600-10` → Cabeza, set ID `600`, color `10`  
-- `ch-665-1408` → Camisa (pecho), set ID `665`, color `1408`  
-- `lg-716-1408-1408` → Pantalones (piernas), set ID `716`, color primario y secundario `1408`  
+- `hd-600-10` → Cabeza, set ID `600`, color `10`
+- `ch-665-1408` → Camisa (pecho), set ID `665`, color `1408`
+- `lg-716-1408-1408` → Pantalones (piernas), set ID `716`, color primario y secundario `1408`
 
 ### **7.2. Ejemplo Completo**
 
@@ -180,14 +180,14 @@ hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-
 
 **Explicación:**
 
-- `hr-802-37` → Cabello, set ID `802`, color `37`  
-- `hd-180-1` → Cabeza, set ID `180`, color `1`  
-- `ch-3030-1408` → Camisa, set ID `3030`, color `1408`  
-- `lg-3023-64` → Pantalones, set ID `3023`, color `64`  
-- `sh-3068-1408-64` → Zapatos, set ID `3068`, color primario `1408`, secundario `64`  
-- `ea-1403-1408` → Gafas, set ID `1403`, color `1408`  
-- `cc-3280-64-1408` → Abrigo, set ID `3280`, color primario `64`, secundario `1408`  
-- `cp-3284-64` → Estampado, set ID `3284`, color `64`  
+- `hr-802-37` → Cabello, set ID `802`, color `37`
+- `hd-180-1` → Cabeza, set ID `180`, color `1`
+- `ch-3030-1408` → Camisa, set ID `3030`, color `1408`
+- `lg-3023-64` → Pantalones, set ID `3023`, color `64`
+- `sh-3068-1408-64` → Zapatos, set ID `3068`, color primario `1408`, secundario `64`
+- `ea-1403-1408` → Gafas, set ID `1403`, color `1408`
+- `cc-3280-64-1408` → Abrigo, set ID `3280`, color primario `64`, secundario `1408`
+- `cp-3284-64` → Estampado, set ID `3284`, color `64`
 
 ### **7.3. Otros Ejemplos**
 

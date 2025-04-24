@@ -2,7 +2,7 @@
 
 - **Specification Status:** Candidate  
 - **Date:** 2025-04-17
-- **Available in:** English (original) | [Portuguese](./HAFN-v2_0-br.md) | [Spanish](./HAFN-v2_0-es.md)
+- **Available in:** English (original) • [Portuguese](./HAFN-v2_0-br.md) • [Spanish](./HAFN-v2_0-es.md)
 
 <details><summary>Table of Contents</summary>
 <div class="js-toc"></div>
