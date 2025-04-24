@@ -12,7 +12,7 @@
 
 ### **1.1. Resumen**
 
-**Habbo Avatar Figure Notation (HAFN) v2** es un estándar para la notación de cadenas de texto diseñado para representar **apariencias de avatares de Habbo** usando códigos compactos separados por puntos. Cada cadena codifica datos estructurados que representan **partes de la figura, identificadores de conjunto (set IDs) e identificadores de color opcionales (color IDs)**, y se basa en los datos expuestos por el archivo `figuredata` disponible.
+**Habbo Avatar Figure Notation (HAFN) v2** es un estándar para la notación de strings de texto diseñado para representar **apariencias de avatares de Habbo** usando códigos compactos separados por puntos. Cada string codifica datos estructurados que representan **partes de la figura, set IDs y color IDs**, y se basa en los datos expuestos por la `figuredata` disponible.
 
 Aunque HAFN v2 refleja cómo se codifican las figuras de avatar en las URLs de Habbo y en los sistemas backend, **no es una notación oficial de Sulake**, y futuros cambios podrían no ser adoptados por Sulake.
 
@@ -22,10 +22,10 @@ Aunque HAFN v2 refleja cómo se codifican las figuras de avatar en las URLs de H
 
 #### **1.2.1. Este Documento**
 
-Esta especificación existe para formalizar y documentar cómo Habbo codifica **cadenas de figura de avatar** para propósitos de renderizado y personalización. Está dirigida a:
+Esta especificación existe para formalizar y documentar cómo Habbo codifica **strings de figura de avatar** para renderización y personalización. Está dirigida a:
 
-- **Una especificación mantenida por la comunidad, no oficial**.
-- Desarrolladores y entusiastas que construyen **herramientas, visualizadores, renderizadores y repositorios** de avatares de Habbo.
+- **Una especificación no oficial, mantenida por la comunidad.**
+- Desempeñada para desarrolladores y entusiastas que construyen **herramientas, visualizadores, renderizadores y repositorios** de avatares de Habbo.
 - Basado en **archivos `figuredata` disponibles públicamente**.
 
 #### **1.2.2. La Notación**
@@ -33,21 +33,21 @@ Esta especificación existe para formalizar y documentar cómo Habbo codifica **
 HAFN v2 es una representación textual de la configuración del avatar que permite:
 
 - **Almacenamiento compacto de una sola línea** de la apariencia del avatar.
-- **Fácil análisis, generación y validación** de las cadenas de figura.
+- **Fácil análisis, generación y validación** de las strings de figura.
 
 NO incluye elementos adicionales como acciones del avatar y efectos visuales, tal como se describe en la [Sección 8](#8-elementos-adicionales).
 
 ### **1.3. Audiencia**
 
-Este documento está dirigido a desarrolladores, archiveros, modders y entusiastas de la comunidad Habbo que trabajan en herramientas y experiencias relacionadas con avatares. Se recomienda familiaridad con manipulación de cadenas y análisis de XML (para leer `figuredata`).
+Este documento está dirigido a desarrolladores, archivistas, modders y entusiastas de la comunidad Habbo que trabajan en herramientas y experiencias relacionadas con avatares. Se recomienda familiaridad con manipulación de strings y análisis de XML (para leer `figuredata`).
 
 ---
 
 ## **2. Estado de este Documento**
 
-HAFN v2.0 define la estructura actualmente conocida de las cadenas de avatar de Habbo, basándose en el comportamiento de análisis observado en Habbo Hotel y personalizable mediante el archivo `figuredata`.
+HAFN v2.0 define la estructura actualmente conocida de strings de los avatares de Habbo, basada en el comportamiento de análisis observado en Habbo Hotel y es personalizable mediante el archivo `figuredata`.
 
-HAFN es **mantenido por la comunidad**. Aunque coincide con los patrones de uso actuales, Sulake puede cambiar el formato en cualquier momento. Futuras extensiones intentarán preservar la compatibilidad hacia atrás siempre que sea posible.
+HAFN es **mantenido por la comunidad**. Aunque coincide con los patrones de uso actuales, Sulake puede cambiar el formato en cualquier momento. Futuras extensiones intentarán preservar la retrocompatibilidad siempre que sea posible.
 
 ---
 
@@ -59,29 +59,29 @@ Las palabras clave "DEBE", "NO DEBE", "OBLIGATORIO", "DEBERÁ", "NO DEBERÁ", "R
 
 ## **4. Conformidad**
 
-Una implementación se considera conforme con HAFN v2.0 si sigue la sintaxis, la lógica de validación y las reglas de resolución definidas en este documento. Un analizador (parser) conforme:
+Una implementación se considera conforme con HAFN v2.0 si sigue la syntax, la lógica de validación y las reglas de resolución definidas en este documento. Una implementación de analizador (parser) conforme:
 
-- **DEBE** resolver tipos de parte, IDs de conjunto e IDs de color utilizando una estructura `figuredata` válida.
-- **DEBE** rechazar cualquier cadena o identificador no presente en el `figuredata` actual.
-- **PUEDE** extender la funcionalidad con extensiones no oficiales, siempre que **NO INTERFIERAN** con la conformidad central.
+- **DEBE** resolver tipos de parte, sets de IDs y color IDs utilizando una estructura `figuredata` válida.
+- **DEBE** rechazar cualquier string o identificadores no presentes en el `figuredata` actual.
+- **PODRÍA** extender la funcionalidad con extensiones no oficiales, siempre que **NO INTERFIERAN** con la conformidad central.
 
-Una cadena válida de HAFN v2.0 **DEBE**:
+Una string válida de HAFN v2.0 **DEBE**:
 
-1. Seguir la definición de sintaxis en la [Sección 5](#5-definición-de-sintaxis).
-2. Referenciar únicamente tipos de parte, IDs de conjunto e IDs de color conocidos definidos en `figuredata`.
-3. Validarse completamente antes de procesarse para evitar configuraciones de avatar indefinidas o malformadas.
+1. Seguir la definición de syntax en la [Sección 5](#5-definición-de-syntax).
+2. Referenciar únicamente tipos de partes, Set IDs y color IDs conocidos, definidos en `figuredata`.
+3. Validar completamente antes de procesar para evitar configuraciones de avatar indefinidas o malformadas.
 
 ---
 
-## **5. Definición de Sintaxis**
+## **5. Definición de Syntax**
 
 ### **5.1. Visión General**
 
-Una cadena HAFN v2 codifica la **apariencia completa de un avatar de Habbo**. Consiste en múltiples **partes de figura**, separadas por puntos (`.`). Cada parte codifica un **tipo**, un **ID de conjunto** y hasta **dos IDs de color**.
+Una string HAFN v2 codifica la **apariencia completa de un avatar de Habbo**. Consiste en múltiples **partes de figura**, separadas por puntos (`.`). Cada parte codifica un **tipo**, un **set ID** y hasta **dos color IDs**.
 
 ### **5.2. Gramática**
 
-La Forma de Backus-Naur Extendida (EBNF) que sigue define la sintaxis de HAFN v2.0:
+La Forma de Backus-Naur Extendida (EBNF) que sigue define el syntax de HAFN v2.0:
 
 ```ebnf
 <figure>    ::= <part> ("." <part>)*
@@ -94,18 +94,18 @@ La Forma de Backus-Naur Extendida (EBNF) que sigue define la sintaxis de HAFN v2
 
 ### **5.3. Restricciones Léxicas**
 
-| Campo         | Tipo      | Descripción                                                               |
-|---------------|-----------|---------------------------------------------------------------------------|
-| `type`        | Cadena    | Un **tipo de parte** válido según `figuredata`                           |
-| `setId`       | Entero    | Un **ID de conjunto** válido para el tipo de parte especificado          |
-| `colorId1`    | Entero    | Un **ID de color primario** (**PUEDE** ser obligatorio según la parte)    |
-| `colorId2`    | Entero    | Un **ID de color secundario**, **OPCIONAL** (para partes con dos capas)   |
+| Campo         | Tipo      | Descripción                                                                             |
+|---------------|-----------|-----------------------------------------------------------------------------------------|
+| `type`        | Cadena    | Un **tipo** de parte válido según `figuredata`                                          |
+| `setId`       | Entero    | Un **set ID** válido perteneciente al tipo de parte especificado                        |
+| `colorId1`    | Entero    | Un **color ID válido primario** (**PODRÍA** ser obligatorio según la parte)             |
+| `colorId2`    | Entero    | Un **color ID válido secundario**, es **OPCIONAL** (para partes con dos capas de color) |
 
 Cada parte **DEBE** corresponder a una entrada `set` existente en `figuredata` bajo `<settype type="...">`.
 
 ### **5.4. Expresión Regular (Simplificada)**
 
-La siguiente expresión regular puede usarse para validar la estructura general de una cadena HAFN v2.0:
+La siguiente expresión regular puede usarse para validar la estructura general de una string HAFN v2.0:
 
 ```regex
 (?:[a-z]{2}-\d+(?:-\d+(?:-\d+)?)?)(?:\.(?:[a-z]{2}-\d+(?:-\d+(?:-\d+)?)?))*
@@ -120,32 +120,32 @@ La siguiente expresión regular puede usarse para validar la estructura general 
 Cada parte se separa con un **punto (`.`)**. El parser **DEBE**:
 
 - Dividir en `.` para extraer partes individuales
-- Dividir cada parte por `-` para identificar tipo, ID de conjunto y colores opcionales
-- Validar el tipo de parte y el ID de conjunto usando una estructura `figuredata` actualizada
+- Dividir cada parte por `-` para identificar tipo, set ID y colores opcionales
+- Validar el tipo de parte y el set ID usando una estructura `figuredata` actualizada
 
 ### **6.2. Reglas de Validación**
 
 - Los **tipos de parte** **DEBEN** existir en `figuredata` bajo `<settype type="...">`
-- Los **IDs de conjunto** **DEBEN** ser válidos para el tipo especificado
-- Los **IDs de color** **DEBEN** estar presentes en la paleta (`paletteid`) referenciada por la definición del conjunto
+- Los **set ID** **DEBEN** ser válidos para el tipo especificado
+- Los **color IDs** **DEBEN** estar presentes en la paleta (`paletteid`) referenciada por la definición de ese set
 
 ### **6.3. Componentes Opcionales**
 
-- Algunas partes **PUEDEN** omitir completamente los IDs de color.
-- Otras **REQUIEREN** uno o dos IDs de color, según la definición del conjunto.
-- Las partes **PUEDEN** aparecer en cualquier orden, aunque algunos sistemas pueden imponer un orden típico.
+- Algunas partes **PODRÍAN** omitir completamente los color IDs.
+- Otras **REQUIEREN** uno o dos color IDs, según la definición del set.
+- Las partes **PODRÍAN** aparecer en cualquier orden, aunque algunos sistemas pueden imponer o esperar un orden típico.
 
 ### **6.4. Manejo de Errores**
 
-| Código de Error           | Descripción                                                     |
-|---------------------------|-----------------------------------------------------------------|
-| **ERR_UNKNOWN_TYPE**      | `type` no encontrado en el `figuredata` actual                  |
-| **ERR_INVALID_SETID**     | ID de conjunto no definido para el tipo especificado           |
-| **ERR_INVALID_COLOR**     | ID de color no válido para la paleta usada en el conjunto      |
-| **ERR_FORMAT_SYNTAX**     | Falta `-`, uso incorrecto de delimitadores                     |
-| **ERR_PART_INCOMPLETE**   | Falta ID de conjunto o ID de color obligatorio                 |
+| Código de Error           | Descripción                                                            |
+|---------------------------|------------------------------------------------------------------------|
+| **ERR_UNKNOWN_TYPE**      | `type` no encontrado en el `figuredata` actual                         |
+| **ERR_INVALID_SETID**     | Set ID no definido para el tipo especificado                           |
+| **ERR_INVALID_COLOR**     | Color ID no válido para la paleta usada en el set                      |
+| **ERR_FORMAT_SYNTAX**     | Falta `-`, uso incorrecto de delimitadores, formato de partes inválido |
+| **ERR_PART_INCOMPLETE**   | Falta set ID o color ID obligatorio                                    |
 
-Un parser conforme con HAFN **DEBE** rechazar cadenas inválidas y reportar el error apropiado.
+Un parser conforme con HAFN **DEBE** rechazar strings inválidas y reportar el error apropiado.
 
 ---
 
@@ -153,7 +153,7 @@ Un parser conforme con HAFN **DEBE** rechazar cadenas inválidas y reportar el e
 
 ### **7.1. Ejemplo Básico**
 
-Considere la siguiente cadena HAFN v2.0:
+Considere el siguiente ejemplo de string HAFN v2.0:
 
 ```txt
 hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408
@@ -163,10 +163,10 @@ hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408
 
 **Explicación:**
 
-- `hr-890-45` → Cabello, conjunto 890, color 45  
-- `hd-600-10` → Cabeza, conjunto 600, color 10  
-- `ch-665-1408` → Camisa (pecho), conjunto 665, color 1408  
-- `lg-716-1408-1408` → Pantalones (piernas), conjunto 716, color primario y secundario 1408  
+- `hr-890-45` → Cabello, set ID `890`, color `45`
+- `hd-600-10` → Cabeza, set ID `600`, color `10`  
+- `ch-665-1408` → Camisa (pecho), set ID `665`, color `1408`  
+- `lg-716-1408-1408` → Pantalones (piernas), set ID `716`, color primario y secundario `1408`  
 
 ### **7.2. Ejemplo Completo**
 
@@ -180,14 +180,14 @@ hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-
 
 **Explicación:**
 
-- `hr-802-37` → Cabello, conjunto 802, color 37  
-- `hd-180-1` → Cabeza, conjunto 180, color 1  
-- `ch-3030-1408` → Camisa, conjunto 3030, color 1408  
-- `lg-3023-64` → Pantalones, conjunto 3023, color 64  
-- `sh-3068-1408-64` → Zapatos, conjunto 3068, color primario 1408, secundario 64  
-- `ea-1403-1408` → Gafas, conjunto 1403, color 1408  
-- `cc-3280-64-1408` → Abrigo, conjunto 3280, color primario 64, secundario 1408  
-- `cp-3284-64` → Estampado, conjunto 3284, color 64  
+- `hr-802-37` → Cabello, set ID `802`, color `37`  
+- `hd-180-1` → Cabeza, set ID `180`, color `1`  
+- `ch-3030-1408` → Camisa, set ID `3030`, color `1408`  
+- `lg-3023-64` → Pantalones, set ID `3023`, color `64`  
+- `sh-3068-1408-64` → Zapatos, set ID `3068`, color primario `1408`, secundario `64`  
+- `ea-1403-1408` → Gafas, set ID `1403`, color `1408`  
+- `cc-3280-64-1408` → Abrigo, set ID `3280`, color primario `64`, secundario `1408`  
+- `cp-3284-64` → Estampado, set ID `3284`, color `64`  
 
 ### **7.3. Otros Ejemplos**
 
@@ -197,9 +197,9 @@ hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-
 
 ## **8. Elementos Adicionales**
 
-Existen otros aspectos relacionados con la figura del avatar que **no** cubre esta especificación, como prendas que usan múltiples partes, acciones del avatar (por ejemplo, tumbarse, sentarse, saludar, bailar) y efectos visuales. Estos elementos no forman parte de la notación en sí y deben considerarse **puramente informativos**; **no** definen ni modifican la notación.
+Existen otros aspectos relacionados con la figura del avatar que **no** estan cubiertos por esta especificación, como prendas que usan múltiples partes, acciones del avatar (por ejemplo, acostarse, sentarse, saludar, bailar) y efectos visuales. Estos elementos no estan presentes en la notación en sí y deben considerarse **puramente informativos** en este documento; estos **no** definen ni alteran la notación en ningún sentido.
 
-A continuación, enlaces a fuentes de datos relevantes usadas para calcular o renderizar estos elementos. Puede generarse documentación adicional para detallarlos:
+A continuación tienen enlaces a fuentes de datos relevantes usadas para calcular o renderizar esos elementos. En un futuro se puede redactar documentación adicional para explicarlos con más detalle:
 
 - [`figuremap.xml`](https://images.habbo.com/gordon/flash-assets-PRODUCTION-202502041750-974842909/figuremap.xml)
 - [`HabboAvatarActions.xml`](https://images.habbo.com/gordon/flash-assets-PRODUCTION-202502041750-974842909/HabboAvatarActions.xml)
@@ -209,28 +209,28 @@ A continuación, enlaces a fuentes de datos relevantes usadas para calcular o re
 
 ## **9. Extensibilidad y Trabajos Futuros**
 
-Futuras versiones **PUEDEN** incluir:
+Futuras versiones **PODRÍAN** incluir:
 
 1. Soporte para **tipos de parte desconocidos** con renderizado de reserva
-2. **Conjuntos nombrados** o mapeadores para representaciones más amigables
-3. Una versión **comprimida o tokenizada** de la cadena de figura para uso en URLs
+2. **Sets nombrados** o mapeadores para representaciones más amigables
+3. Una versión **comprimida o tokenizada** de la string de figura para su uso en URLs
 
-Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y la compatibilidad hacia atrás **PUEDEN** mantenerse cuando sea posible.
+Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y la retrocompatibilidan **DEBERÍA** mantenerse mientras sea posible.
 
 ---
 
 ## **10. Consideraciones de Seguridad**
 
-Aunque HAFN v2 es una notación de texto y **no ejecuta código**, las implementaciones **DEBEN** sanitizar y validar rigurosamente las cadenas de entrada para prevenir:
+Aunque HAFN v2 es una notación textual y **no ejecuta código**, las implementaciones **DEBEN** sanitizar y validar rigurosamente las input strings para prevenir:
 
 - Desbordamientos de búfer
 - Ataques de inyección
-- Renderizados incorrectos por entradas malformadas
+- Renderización incorrecta debido a inputs malformadas
 
 > [!IMPORTANTE]
-> Las cadenas HAFN v2 **no verifican la propiedad** de prendas ni colores. Representan **solo apariencia** y no deben usarse para imponer acceso o propiedad de partes de la figura.
+> Las strings HAFN v2 **no verifican la propiedad** de ropa o colores. **Solo representan la apariencia** y no deben usarse para imponer acceso o la propiedad de partes de la figura.
 
-La adhesión estricta a la sintaxis y a las directrices de procesamiento es necesaria para una implementación segura.
+La estricta adherencia al syntax y a las directrices de procesamiento son requeridas para una implementación segura.
 
 ---
 
@@ -238,8 +238,8 @@ La adhesión estricta a la sintaxis y a las directrices de procesamiento es nece
 
 - *[XML `figuredata` de Habbo](https://www.habbo.com/gamedata/figuredata/1)*
 - *[Servicio de Renderizado de Avatar de Habbo](https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b)*
-- *[Habbo Imager por el sitio de fans "Pixels Emotions"](https://pixelsemotion.tumblr.com/habbo-imager)*
-- *[Editor de Figuras por el sitio de fans "Habbo News"](https://www.habbonews.net/p/habbo-visuais.html)*
+- *[Habbo Imager por la fansite "Pixels Emotions"](https://pixelsemotion.tumblr.com/habbo-imager)*
+- *[Editor de Figuras por la fansite "Habbo News"](https://www.habbonews.net/p/habbo-visuais.html)*
 
 ---
 
@@ -258,8 +258,8 @@ La adhesión estricta a la sintaxis y a las directrices de procesamiento es nece
   - Se completó la sección de ejemplos.
   - Ajustes menores en el borrador.
 - **v2.0.5 – 2025-04-17**
-  - Estandarización de la estructura de la especificación.
-  - Finalización de la sección de conformidad.
-  - Adición de la sección de "Expresión Regular".
-  - Movimiento de la sección de Manejo de Errores dentro del Modelo de Procesamiento.
+  - Estandarización de la estructura de especificaciones.
+  - Se completó la sección de conformidad.
+  - Adición de la sección "Expresión Regular".
+  - Movimiento de la sección de 'Manejo de Errores' dentro del 'Modelo de Procesamiento'.
   - Ajustes menores en el borrador.
