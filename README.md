@@ -5,10 +5,17 @@
 This repository documents various notations and data structures used in Habbo Hotel, including:
 
 - **[Avatar Figure](./avatar-figure/README.md)**: Details on how avatar figures are represented.
+- **[Ball & Puck](./ball-puck/README.md)**: Details on how the behaviour of the balls and pucks are defined.
+- **[Firework Particles](./firework-particles/README.md)**: Details on how the firework furniture generate their particles.
 - **[Group Badges](./group-badge/README.md)**: Information on the notation used for group badges.
 - **[Music](./music/README.md)**: Documentation of the Habbo Music Notation (HMN) used in the Traxmachine.
+- **[Pet Food](./pet-food/README.md)**: Details on how the pet food defines their values.
 - **[Room Icon](./room-icon/README.md)**: Explanation of the notation for room icons.
+- **Totem Combinations**: Details on how the 3-part totem can be combined to give effects.
 - **[Wall Furni Location](./wall-furni-position/README.md)**: Details on how wall furniture locations are encoded.
+- **Waterable Furni**: Details how the furniture interacts with water.
+
+And many more to come: automatic closing gates (battle banzai pyramid), furni that change clothes (santa teleport, fotball gate, etc), freeze tile&block, bunny pole, skate rail, horse accessories, snowboard patch, hoppers, pet baby boxes, cannons, traps, etc!
 
 Each section provides a comprehensive overview of the respective notations, including syntax definitions, examples, and processing models.
 
