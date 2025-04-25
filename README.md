@@ -42,3 +42,30 @@ Specifications evolve through several lifecycle stages, representing their matur
 3. **Candidate**: A mature draft that is believed to be complete and internally consistent. It is now ready for experimental or real-world implementation and review. Only minor refinements are expected before finalization. **Purpose:** Encourage testing and validation before final release.
 4. **Stable**: The specification is finalized, with confirmed implementations and no expected major changes. This is the recommended version for production use. **Purpose:** Mark the specification as reliable and complete.
 5. **Obsolete**: The specification is no longer recommended for use. It may have been replaced by a newer version or deprecated due to lack of relevance. **Purpose:** Inform users that the document is outdated or superseded.
+
+---
+
+## Contributions
+
+This project acknowledges contributors using the **[CRediT taxonomy](https://credit.niso.org/)**, a standardized system that defines specific roles in the development of scholarly and technical content. Each contributor's role may be described using one or more of the following categories:
+
+- **Conceptualization**: Formulating the main ideas and goals behind the specification.
+- **Data Curation**: Organizing and maintaining data sources, examples, and references.
+- **Formal Analysis**: Applying logic, structure, or technical validation methods.
+- **Funding Acquisition**: Securing financial or material support for the project (if applicable).
+- **Investigation**: Performing background research, testing, or reverse engineering.
+- **Methodology**: Designing the structure, syntax, or operational model of the notation.
+- **Project Administration**: Managing planning, communications, and publication.
+- **Resources**: Supplying tools, assets, or references used to build the specification.
+- **Software**: Writing code, tooling, or validators used with the notations.
+- **Supervision**: Providing oversight or leadership on the project direction.
+- **Validation**: Verifying accuracy, syntax, and compliance of the model.
+- **Visualization**: Creating illustrations, diagrams, or visual examples.
+- **Writing (Original Draft)**: Writing the initial content or first complete version.
+- **Writing (Review & Editing)**: Reviewing, refining, and improving the specification text.
+
+### People Involved
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author and Project Administration
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Conceptualization and Investigation
+- **["uzuki"](https://x.com/uzukies)**: Writing (Review & Editing)
