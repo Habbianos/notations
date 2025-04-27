@@ -11,7 +11,7 @@ This repository documents various notations and data structures used in Habbo Ho
 - **[Music](./music/README.md)**: Documentation of the Habbo Music Notation (HMN) used in the Traxmachine.
 - **[Pet Food](./pet-food/README.md)**: Details on how the pet food defines their values.
 - **[Room Icon](./room-icon/README.md)**: Explanation of the notation for room icons.
-- **Totem Combinations**: Details on how the 3-part totem can be combined to give effects.
+- **[Totem Combinations](./totem-combinations/README.md)**: Details on how the 3-part totem can be combined to give effects.
 - **[Wall Furni Location](./wall-furni-position/README.md)**: Details on how wall furniture locations are encoded.
 - **Waterable Furni**: Details how the furniture interacts with water.
 
