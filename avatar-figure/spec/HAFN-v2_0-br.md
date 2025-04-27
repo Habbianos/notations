@@ -1,7 +1,7 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
 - **Status da Especificação:** Candidato  
-- **Data:** 2025-04-17
+- **Data:** 2025-04-27
 - **Disponível em:** [Inglês (original)](./HAFN-v2_0.md) • Português • [Espanhol](./HAFN-v2_0-es.md)
 
 <details><summary>Sumário</summary>
@@ -234,9 +234,32 @@ A adesão estrita à sintaxe e às diretrizes de processamento é necessária pa
 
 ---
 
-## **11. Referências**
+## **11. Tabela de Referência para Categorias de Partes da Figura**
 
-- *[XML `figuredata` do Habbo](https://www.habbo.com/gamedata/figuredata/1)*
+A tabela a seguir lista os **identificadores de duas letras atualmente suportados** usados para partes da figura do avatar, juntamente com seus nomes, ícones e exemplos.
+
+| Nome da Categoria | Ícone da Categoria                               | Identificador da Subcategoria ▲ | Nome da Subcategoria               | Ícone da Subcategoria                                                                                                                                                                                           | Exemplos                                                                                                                                                                    |
+|-------------------|--------------------------------------------------|---------------------------------|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parte de cima     | ![Ícone Parte de cima](../img/ae_tabs_torso.png) | `ca`                            | Bijuterias (acessórios superiores) | ![Ícone Acessórios Superiores](../img/top_accessories.png) ![Ícone Contorno Acessórios Superiores](../img/top_accessories_outline.png)                                                                          | ![Joias 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=ca-5934-92) ![Joias 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=ca-5571-96)                 |
+| Parte de cima     | ![Ícone Parte de cima](../img/ae_tabs_torso.png) | `cc`                            | Casacos                            | ![Ícone Casacos](../img/top_jacket.png) ![Ícone Contorno Casacos](../img/top_jacket_outline.png)                                                                                                                | ![Jaquetas 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=cc-3280-64-1408) ![Jaquetas 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=cc-4184-64-1408) |
+| Parte de cima     | ![Ícone Parte de cima](../img/ae_tabs_torso.png) | `ch`                            | Camisas                            | ![Ícone Camisa](../img/top_shirt.png) ![Ícone Contorno Camisa](../img/top_shirt_outline.png)                                                                                                                    | ![Camisas 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=ch-665-1408) ![Camisas 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=ch-3030-1408)          |
+| Parte de cima     | ![Ícone Parte de cima](../img/ae_tabs_torso.png) | `cp`                            | Estampas                           | ![Ícone Estampas](../img/top_prints.png) ![Ícone Contorno Estampas](../img/top_prints_outline.png)                                                                                                              | ![Estampas 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=cp-3284-64) ![Estampas 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=cp-3311-110)          |
+| Cabeça            | ![Ícone Cabeça](../img/ae_tabs_head.png)         | `ea`                            | Óculos (acessórios de rosto)       | ![Ícone Óculos](../img/head_eyewear.png) ![Ícone Contorno Óculos](../img/head_eyewear_outline.png)                                                                                                              | ![Óculos 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=ea-1403-1408) ![Óculos 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=ea-3484)                |
+| Cabeça            | ![Ícone Cabeça](../img/ae_tabs_head.png)         | `fa`                            | Máscaras (acessórios faciais)      | ![Ícone Acessórios Faciais](../img/head_face_accessories.png) ![Ícone Contorno Acessórios Faciais](../img/head_face_accessories_outline.png)                                                                    | ![Máscaras 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=fa-3344-110) ![Máscaras 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=fa-1206-110)         |
+| Cabeça            | ![Ícone Cabeça](../img/ae_tabs_head.png)         | `ha`                            | Chapéus                            | ![Ícone Chapéus](../img/head_hats.png) ![Ícone Contorno Chapéus](../img/head_hats_outline.png)                                                                                                                  | ![Chapéus 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=ha-3843-1408-64) ![Chapéus 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=ha-3242-110-92)    |
+| Corpo             | ![Ícone Genérico](../img/ae_tabs_generic.png)    | `hd`                            | Rosto e Corpo                      | ![Ícone Masculino](../img/gender_male.png) ![Ícone Contorno Masculino](../img/gender_male_outline.png) ![Ícone Feminino](../img/gender_female.png) ![Ícone Contorno Feminino](../img/gender_female_outline.png) | ![Rosto e Corpo 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=hd-600-10) ![Rosto e Corpo 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=hd-180-1)    |
+| Cabeça            | ![Ícone Cabeça](../img/ae_tabs_head.png)         | `he`                            | Acessórios                         | ![Ícone Acessórios Cabeça](../img/head_accessories.png) ![Ícone Contorno Acessórios Cabeça](../img/head_accessories_outline.png)                                                                                | ![Acessórios 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=he-5828) ![Acessórios 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=he-1608)             |
+| Cabeça            | ![Ícone Cabeça](../img/ae_tabs_head.png)         | `hr`                            | Cabelos                            | ![Ícone Cabelo](../img/head_hair.png) ![Ícone Contorno Cabelo](../img/head_hair_outline.png)                                                                                                                    | ![Cabelos 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-890-45) ![Cabelos 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=hr-802-37)               |
+| Parte de baixo    | ![Ícone Parte de baixo](../img/ae_tabs_legs.png) | `lg`                            | Calças                             | ![Ícone Calças](../img/bottom_trousers.png) ![Ícone Contorno Calças](../img/bottom_trousers_outline.png)                                                                                                        | ![Calças 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=lg-716-1408-1408) ![Calças 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=lg-3023-64)         |
+| Parte de baixo    | ![Ícone Parte de baixo](../img/ae_tabs_legs.png) | `sh`                            | Sapatos                            | ![Ícone Sapatos](../img/bottom_shoes.png) ![Ícone Contorno Sapatos](../img/bottom_shoes_outline.png)                                                                                                            | ![Sapatos 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=sh-3068-1408-64) ![Sapatos 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=sh-4159-64-1408)   |
+| Parte de baixo    | ![Ícone Parte de baixo](../img/ae_tabs_legs.png) | `wa`                            | Cintos (acessórios inferiores)     | ![Ícone Acessórios Inferiores](../img/bottom_accessories.png) ![Ícone Contorno Acessórios Inferiores](../img/bottom_accessories_outline.png)                                                                    | ![Cintos 1](https://www.habbo.com/habbo-imaging/avatarimage?figure=wa-2003-61) ![Cintos 2](https://www.habbo.com/habbo-imaging/avatarimage?figure=wa-6071-61)               |
+
+---
+
+## **12. Referências**
+
+- *[XML `figuredata` do Habbo](https://www.habbo.com.br/gamedata/figuredata/1)*
+- *[Definição `external_flash_texts` do Habbo](https://www.habbo.com.br/gamedata/external_flash_texts/1)*
 - *[Serviço de Renderização de Avatar do Habbo](https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b)*
 - *[Habbo Imager pelo site de fãs "Pixels Emotions"](https://pixelsemotion.tumblr.com/habbo-imager)*
 - *[Editor de Figuras pelo site de fãs "Habbo News"](https://www.habbonews.net/p/habbo-visuais.html)*
@@ -263,3 +286,5 @@ A adesão estrita à sintaxe e às diretrizes de processamento é necessária pa
   - Adicionada a seção de "Expressão Regular".
   - Movida a seção de Tratamento de Erros para dentro do Modelo de Processamento.
   - Ajustes menores no rascunho.
+- **v2.0.6 - 2025-04-27**
+  - Seção de tabela de referência adicionada
