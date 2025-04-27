@@ -33,6 +33,49 @@ details {
 details summary {
   cursor: pointer;
 }
+
+table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+
+	/* FROM https://codepen.io/Alynva/pen/KKZdwZb */
+	--bgColor: white;
+	--shadowColor: rgba(0, 0, 0, .5);
+  background:
+    linear-gradient(to right, var(--bgColor) 30%, rgba(255, 255, 255, 0)) 0 100%, linear-gradient(to right, rgba(255, 255, 255, 0), var(--bgColor) 70%) 100% 0,
+    radial-gradient(farthest-side at 0 50%, var(--shadowColor), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, var(--shadowColor), rgba(0, 0, 0, 0)) 100% 0;
+  background-repeat: no-repeat;
+  background-color: var(--bgColor);
+  background-size: 40px 100% , 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+table th {
+	font-weight: 600
+}
+
+table th,
+table td {
+	padding: 6px 13px;
+}
+
+table tr {
+	background-color: #ffffffaa;
+}
+
+table tr:nth-child(2n) {
+	background-color: #f6f8faaa
+}
+
+table tr:has(td:hover) {
+	background-color: #eef0f2aa
+}
+
+table img {
+	background-color: transparent
+}
+
     </style>
     {% include head-custom.html %}
   </head>
@@ -100,6 +143,7 @@ details summary {
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}" target="_blank">{{ site.github.owner_name }}</a></p>
+        <p><a href="{{ site.github.repository_url }}?sponsor" target="_blank">🙏 Become a Backer</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
       </footer>

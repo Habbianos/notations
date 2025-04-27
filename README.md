@@ -1,5 +1,9 @@
 # notations
 
+<details><summary>Table of Contents</summary>
+<div class="js-toc"></div>
+</details>
+
 ## Areas Covered
 
 This repository documents various notations and data structures used in Habbo Hotel, including:
