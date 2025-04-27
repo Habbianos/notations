@@ -1,6 +1,6 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
-- **Specification Status:** Candidate  
+- **Specification Status:** Candidate
 - **Date:** 2025-04-27
 - **Available in:** English (original) • [Portuguese](./HAFN-v2_0-br.md) • [Spanish](./HAFN-v2_0-es.md)
 
@@ -164,10 +164,10 @@ hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408
 
 **Explanation:**
 
-- `hr-890-45` → Hair, set ID 890, color 45  
-- `hd-600-10` → Head, set ID 600, color 10  
-- `ch-665-1408` → Shirt (chest), set 665, color 1408  
-- `lg-716-1408-1408` → Pants (legs), set 716, dual color 1408  
+- `hr-890-45` → Hair, set ID 890, color 45
+- `hd-600-10` → Head, set ID 600, color 10
+- `ch-665-1408` → Shirt (chest), set 665, color 1408
+- `lg-716-1408-1408` → Pants (legs), set 716, dual color 1408
 
 ### **7.2. Complete Example**
 
@@ -181,14 +181,14 @@ hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-
 
 **Explanation:**
 
-- `hr-802-37` → Hair, set ID 802, color 37  
-- `hd-180-1` → Head, set ID 180, color 1  
-- `ch-3030-1408` → Shirt, set 3030, color 1408  
-- `lg-3023-64` → Pants, set 3023, color 64  
-- `sh-3068-1408-64` → Shoes, set 3068, primary color 1408, secondary 64  
-- `ea-1403-1408` → Glasses, set 1403, color 1408  
-- `cc-3280-64-1408` → Coat, set 3280, primary color 64, secondary 1408  
-- `cp-3284-64` → Print, set 3284, color 64  
+- `hr-802-37` → Hair, set ID 802, color 37
+- `hd-180-1` → Head, set ID 180, color 1
+- `ch-3030-1408` → Shirt, set 3030, color 1408
+- `lg-3023-64` → Pants, set 3023, color 64
+- `sh-3068-1408-64` → Shoes, set 3068, primary color 1408, secondary 64
+- `ea-1403-1408` → Glasses, set 1403, color 1408
+- `cc-3280-64-1408` → Coat, set 3280, primary color 64, secondary 1408
+- `cp-3284-64` → Print, set 3284, color 64
 
 ### **7.3. Other Examples**
 
@@ -228,7 +228,7 @@ Although HAFN v2 is a textual notation and **does not execute code**, implementa
 - Injection attacks
 - Improper rendering due to malformed input
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > HAFN v2 strings **do not verify clothes or color ownership**. They represent **appearance only** and should not be used to enforce access or ownership of figure parts.
 
 Strict adherence to the syntax and processing guidelines is required for safe implementation.

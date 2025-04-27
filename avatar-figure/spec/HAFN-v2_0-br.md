@@ -1,6 +1,6 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
-- **Status da Especificação:** Candidato  
+- **Status da Especificação:** Candidato
 - **Data:** 2025-04-27
 - **Disponível em:** [Inglês (original)](./HAFN-v2_0.md) • Português • [Espanhol](./HAFN-v2_0-es.md)
 
@@ -163,10 +163,10 @@ hr-890-45.hd-600-10.ch-665-1408.lg-716-1408-1408
 
 **Explicação:**
 
-- `hr-890-45` → Cabelo, ID de conjunto 890, cor 45  
-- `hd-600-10` → Cabeça, ID de conjunto 600, cor 10  
-- `ch-665-1408` → Camisa (peito), conjunto 665, cor 1408  
-- `lg-716-1408-1408` → Calças (pernas), conjunto 716, cores duplas 1408  
+- `hr-890-45` → Cabelo, ID de conjunto 890, cor 45
+- `hd-600-10` → Cabeça, ID de conjunto 600, cor 10
+- `ch-665-1408` → Camisa (peito), conjunto 665, cor 1408
+- `lg-716-1408-1408` → Calças (pernas), conjunto 716, cores duplas 1408
 
 ### **7.2. Exemplo Completo**
 
@@ -180,14 +180,14 @@ hr-802-37.hd-180-1.ch-3030-1408.lg-3023-64.sh-3068-1408-64.ea-1403-1408.cc-3280-
 
 **Explicação:**
 
-- `hr-802-37` → Cabelo, conjunto 802, cor 37  
-- `hd-180-1` → Cabeça, conjunto 180, cor 1  
-- `ch-3030-1408` → Camisa, conjunto 3030, cor 1408  
-- `lg-3023-64` → Calças, conjunto 3023, cor 64  
-- `sh-3068-1408-64` → Sapatos, conjunto 3068, cor primária 1408, secundária 64  
-- `ea-1403-1408` → Óculos, conjunto 1403, cor 1408  
-- `cc-3280-64-1408` → Casaco, conjunto 3280, cor primária 64, secundária 1408  
-- `cp-3284-64` → Estampa, conjunto 3284, cor 64  
+- `hr-802-37` → Cabelo, conjunto 802, cor 37
+- `hd-180-1` → Cabeça, conjunto 180, cor 1
+- `ch-3030-1408` → Camisa, conjunto 3030, cor 1408
+- `lg-3023-64` → Calças, conjunto 3023, cor 64
+- `sh-3068-1408-64` → Sapatos, conjunto 3068, cor primária 1408, secundária 64
+- `ea-1403-1408` → Óculos, conjunto 1403, cor 1408
+- `cc-3280-64-1408` → Casaco, conjunto 3280, cor primária 64, secundária 1408
+- `cp-3284-64` → Estampa, conjunto 3284, cor 64
 
 ### **7.3. Outros Exemplos**
 
