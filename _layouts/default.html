@@ -38,13 +38,22 @@ table {
 	display: block;
 	width: 100%;
 	overflow: auto;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
 
-	/* FROM https://codepen.io/Alynva/pen/KKZdwZb */
 	--bgColor: white;
 	--shadowColor: rgba(0, 0, 0, .5);
+}
+pre {
+	--bgColor: #f8f8f8;
+	--shadowColor: rgba(0, 0, 0, .2);
+}
+table, pre {
+	/* FROM https://codepen.io/Alynva/pen/KKZdwZb */
   background:
-    linear-gradient(to right, var(--bgColor) 30%, rgba(255, 255, 255, 0)) 0 100%, linear-gradient(to right, rgba(255, 255, 255, 0), var(--bgColor) 70%) 100% 0,
-    radial-gradient(farthest-side at 0 50%, var(--shadowColor), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, var(--shadowColor), rgba(0, 0, 0, 0)) 100% 0;
+    linear-gradient(to right, var(--bgColor) 30%, rgba(0, 0, 0, 0)) 0 100%, linear-gradient(to right, rgba(0, 0, 0, 0), var(--bgColor) 70%) 100% 0,
+    linear-gradient(to right, var(--shadowColor) 30%, rgba(0, 0, 0, 0)) 0 100%, linear-gradient(to right, rgba(0, 0, 0, 0), var(--shadowColor) 70%) 100% 0;
+    /* radial-gradient(farthest-side at 0 50%, var(--shadowColor), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, var(--shadowColor), rgba(0, 0, 0, 0)) 100% 0; */
   background-repeat: no-repeat;
   background-color: var(--bgColor);
   background-size: 40px 100% , 40px 100%, 14px 100%, 14px 100%;
