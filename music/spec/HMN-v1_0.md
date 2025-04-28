@@ -195,7 +195,7 @@ While HMN is **purely textual** and **does not involve code execution**, parsers
 
 - *[Traxmachine](https://traxmachine.com/)*
 - *[Musics Archive - Habbianos](https://github.com/Habbianos/Traxmachine/blob/main/components/musics-archive/README.md)*
-- *[Habborator | Trax](http://www.habborator.org/trax/)*
+- *[Habborator - Trax](http://www.habborator.org/trax/)*
 
 ---
 
