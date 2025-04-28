@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{ "/favicon.png" | relative_url }}" type="image/png">
+    <link rel="preload" href="/assets/img/bg5.png" as="image">
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <style>
 html {
   scroll-behavior: smooth;
+}
+body {
+  background-image: url(/assets/img/bg5.png), url(/assets/img/clouds.png);
+  background-repeat: repeat, no-repeat;
+  background-position: top center;
+  background-color: #efefef;
 }
 header h1 img {
   margin-right: 10px;
@@ -87,7 +94,6 @@ table img {
 .back-to-top-link {
   text-decoration: none;
   color: #007bff;
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
     </style>
@@ -204,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
       transform: "translateY(-50%)",
       fontSize: "0.8em",
       padding: "0 5px",
+      backgroundColor: "rgb(225 225 225)",
     });
 
     backToTopLink.addEventListener("click", function(e) {
