@@ -84,6 +84,11 @@ table tr:has(td:hover) {
 table img {
 	background-color: transparent
 }
+.back-to-top-link {
+  text-decoration: none;
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 
     </style>
     {% include head-custom.html %}
@@ -138,6 +143,8 @@ table img {
       <section>
 
         {{ content }}
+
+        <a href="#" class="back-to-top-link">⬆️ Back to top</a>
       
         {% if site.github.repository_url and page.path %}
           <p style="margin-top: 2em;">
@@ -173,6 +180,14 @@ table img {
     <script>
 document.addEventListener("DOMContentLoaded", function() {
   const headers = document.querySelectorAll("h2, h3, h4, h5, h6");
+
+  document.querySelector(".back-to-top-link").addEventListener("click", function(e) {
+    e.preventDefault(); // Cancel default anchor behavior
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+  })
   
   headers.forEach(header => {
     header.style.position = "relative";
@@ -180,6 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const backToTopLink = document.createElement("a");
     backToTopLink.href = "#";
     backToTopLink.textContent = "Back to top";
+    backToTopLink.classList.add("back-to-top-link")
 
     Object.assign(backToTopLink.style, {
       position: "absolute",
@@ -187,10 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
       top: "50%",
       transform: "translateY(-50%)",
       fontSize: "0.8em",
-      textDecoration: "none",
-      color: "#007bff",
       padding: "0 5px",
-      backgroundColor: "rgba(255, 255, 255, 0.8)",
     });
 
     backToTopLink.addEventListener("click", function(e) {
