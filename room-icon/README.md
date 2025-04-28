@@ -2,4 +2,7 @@
 
 Available Specifications:
 
-- [HRIN v1.0](./spec/HRIN-v1_0.md) (last changed in 2025-04-18)
+- [HRIN v1.0](spec/HRIN-v1_0.md)
+  - **Specification Status:** Draft
+  - **Date:** 2025-04-18
+  - **Available in:** English
