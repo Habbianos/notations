@@ -10,7 +10,7 @@ This repository documents various notations and data structures used in Habbo Ho
 
 - **[Avatar Figure](./avatar-figure/README.md)**: Details on how avatar figures are represented.
 - **[Ball & Puck](./ball-puck/README.md)**: Details on how the behaviour of the balls and pucks are defined.
-- **Camera**: How the elements in the room are captured and validated server-side.
+- **[Camera](./camera/README.md)**: How the elements in the room are captured and validated server-side.
 - **[Firework Particles](./firework-particles/README.md)**: Details on how the firework furniture generate their particles.
 - **[Group Badges](./group-badge/README.md)**: Information on the notation used for group badges.
 - **[Music](./music/README.md)**: Documentation of the Habbo Music Notation (HMN) used in the Traxmachine.

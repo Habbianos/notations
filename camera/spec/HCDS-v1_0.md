@@ -1,0 +1,148 @@
+# **Habbo Camera Data Structure (HCDS) v1.0**
+
+- **Specification Status:** Exploratory
+- **Date:** 2025-04-29
+- **Available in:** English
+
+<details><summary>Table of Contents</summary>
+<div class="js-toc"></div>
+</details>
+
+## Camera
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://habbianos.github.io/notations/camera/spec/HCDS-v1_0.schema.json",
+  "title": "RoomSnapshot",
+  "description": "JSON schema representing a room snapshot, including planes, sprites, filters, and metadata.",
+  "type": "object",
+  "properties": {
+    "planes": {
+      "description": "Array of geometric planes in the scene",
+      "type": "array",
+      "items": { "$ref": "#/$defs/plane" }
+    },
+    "sprites": {
+      "description": "Array of sprites placed in the scene",
+      "type": "array",
+      "items": { "$ref": "#/$defs/sprite" }
+    },
+    "modifiers": {
+      "description": "Object of applied modifiers (dynamic keys)",
+      "type": "object",
+      "additionalProperties": true
+    },
+    "filters": {
+      "description": "Sequence of filter effects applied to the image",
+      "type": "array",
+      "items": { "$ref": "#/$defs/filter" }
+    },
+    "roomid": {
+      "description": "Unique identifier of the room",
+      "type": "integer"
+    },
+    "zoom": {
+      "description": "Zoom level of the view",
+      "type": "integer"
+    },
+    "status": {
+      "description": "Rendering status code",
+      "type": "integer"
+    },
+    "timestamp": {
+      "description": "Timestamp in milliseconds since Unix epoch",
+      "type": "integer"
+    },
+    "checksum": {
+      "description": "Checksum value for data integrity",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "planes", "sprites", "modifiers", "filters",
+    "roomid", "status", "timestamp", "checksum"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "plane": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "description": "Plane color as integer (RGB)",
+          "type": "integer"
+        },
+        "bottomAligned": {
+          "description": "Whether the plane is aligned to the bottom",
+          "type": "boolean"
+        },
+        "z": {
+          "description": "Depth (Z-axis) of the plane",
+          "type": "number"
+        },
+        "cornerPoints": {
+          "description": "Four vertices defining the plane rectangle",
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/point" }
+        },
+        "texCols": {
+          "description": "Collection of textures applied to the plane",
+          "type": "array",
+          "items": { "$ref": "#/$defs/texCol" }
+        }
+      },
+      "required": ["color", "bottomAligned", "z", "cornerPoints", "texCols"],
+      "additionalProperties": false
+    },
+    "point": {
+      "type": "object",
+      "properties": {
+        "x": { "description": "X coordinate", "type": "integer" },
+        "y": { "description": "Y coordinate", "type": "integer" }
+      },
+      "required": ["x", "y"],
+      "additionalProperties": false
+    },
+    "texCol": {
+      "type": "object",
+      "properties": {
+        "assetNames": {
+          "description": "List of texture asset names",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["assetNames"],
+      "additionalProperties": false
+    },
+    "sprite": {
+      "type": "object",
+      "properties": {
+        "x": { "description": "X position of the sprite", "type": "integer" },
+        "y": { "description": "Y position of the sprite", "type": "integer" },
+        "z": { "description": "Depth (Z-axis) of the sprite", "type": "number" },
+        "name": { "description": "Graphic resource identifier", "type": "string" },
+        "color": { "description": "Applied color on the sprite (RGB)", "type": "integer" }
+      },
+      "required": ["x", "y", "z", "name", "color"],
+      "additionalProperties": false
+    },
+    "filter": {
+      "type": "object",
+      "properties": {
+        "name": { "description": "Filter name", "type": "string" },
+        "alpha": {
+          "description": "Filter intensity level (0–255)",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "required": ["name", "alpha"],
+      "additionalProperties": false
+    }
+  }
+}
+```
