@@ -88,3 +88,4 @@ This project acknowledges contributors using the **[CRediT taxonomy](https://cre
 - **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author and Project Administration
 - **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Conceptualization and Investigation
 - **["uzuki"](https://x.com/uzukies)**: Writing (Review & Editing)
+- **[WiredSpast](https://github.com/WiredSpast)**: Investigation
