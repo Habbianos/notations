@@ -25,6 +25,20 @@ Each section provides a comprehensive overview of the respective notations, incl
 
 ---
 
+## Notations vs Data Structures
+
+This project includes both **notations** and **data structures**, each serving different purposes and design philosophies:
+
+- **Notations** are custom formats that define their own syntax and structure, often using delimiters or compact representations to encode information. They focus on *how* data is written and interpreted, without embedding metadata about what each element means.
+  - They are **self-contained but context-dependent**: the meaning of each part must be known from external documentation or conventions.
+- **Data Structures**, on the other hand, use standardized formats (like CSV, JSON, XML, or key/value tables) that carry *metadata* or structural context alongside the data. They are typically more explicit, readable, and self-descriptive.
+  - They are **self-describing**: keys, column headers, or tags indicate what each value represents.
+
+> [!NOTE]
+> In simpler cases, such as a comma-separated list of parameters, the format may still be considered a data structure, even if it lacks explicit metadata, as long as it doesn’t define its own complex or symbolic syntax. The key distinction lies in whether the format invents a new encoding scheme, not merely in the presence of labels.
+
+---
+
 ## Versioning
 
 We follow a versioning strategy similar to [Semver](https://semver.org/), where a version is defined as `v[FORMAT].[EXTENSION].[REVISION]`. Changes are applied as follows:
