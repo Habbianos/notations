@@ -58,7 +58,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 An implementation is considered HCDS v1.0 compliant if it adheres to the structural rules, value constraints, and processing semantics defined in this document. A conforming parser or generator implementation:
 
-- **MUST** validate every property and subschema exactly as defined in the JSON Schema ([Appendix A](#10-appendix-a-json-schema)), including types, required fields, and value ranges.
+- **MUST** validate every property and subschema exactly as defined in the JSON Schema ([Appendix A](#11-appendix-a-json-schema)), including types, required fields, and value ranges.
 - **MUST** verify the top‐level `checksum` matches the computed integrity check over the serialized payload before accepting the snapshot.
 
 A valid HCDS v1.0 room snapshot **MUST**:
@@ -67,7 +67,7 @@ A valid HCDS v1.0 room snapshot **MUST**:
 2. Ensure each `plane.cornerPoints` array contains **exactly four** valid `point` objects with integer `x` and `y`.
 3. Constrain each `filter.alpha` to an **integer** in the range **0–255**.
 
-Implementations **MAY** support extra, non-interfering features, such as custom filter types or metadata fields, provided those extensions do not break core compliance with the schema in [Appendix A](#10-appendix-a-json-schema).
+Implementations **MAY** support extra, non-interfering features, such as custom filter types or metadata fields, provided those extensions do not break core compliance with the schema in [Appendix A](#11-appendix-a-json-schema).
 
 ---
 
@@ -269,7 +269,56 @@ To keep parsing and rendering more efficient, implementations **SHOULD** observe
 
 ---
 
-## **10. Appendix A: JSON Schema**
+## **13. Reference Table for Camera Effects**
+
+Below is a lookup table of all supported camera effects, their display names, and their images:
+
+| Effect Identifier    | Display Name         | Image                                                                                             |
+| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
+| yellow               | Yellow               | ![yellow](https://images.habbo.com/c_images/Habbo-Stories/yellow.png)                             |
+| alien_hrd            | Alien slime          | ![alien_hrd](https://images.habbo.com/c_images/Habbo-Stories/alien_hrd.png)                       |
+| black_white_negative | Black white negative | ![black_white_negative](https://images.habbo.com/c_images/Habbo-Stories/black_white_negative.png) |
+| blue                 | Blue                 | ![blue](https://images.habbo.com/c_images/Habbo-Stories/blue.png)                                 |
+| bluemood_mpl         | Blue mood            | ![bluemood_mpl](https://images.habbo.com/c_images/Habbo-Stories/bluemood_mpl.png)                 |
+| coffee_mpl           | Coffee stains        | ![coffee_mpl](https://images.habbo.com/c_images/Habbo-Stories/coffee_mpl.png)                     |
+| color_1              | Pale                 | ![color_1](https://images.habbo.com/c_images/Habbo-Stories/color_1.png)                           |
+| color_2              | Gray                 | ![color_2](https://images.habbo.com/c_images/Habbo-Stories/color_2.png)                           |
+| color_3              | Rosy                 | ![color_3](https://images.habbo.com/c_images/Habbo-Stories/color_3.png)                           |
+| color_4              | Light gray           | ![color_4](https://images.habbo.com/c_images/Habbo-Stories/color_4.png)                           |
+| color_5              | Magenta              | ![color_5](https://images.habbo.com/c_images/Habbo-Stories/color_5.png)                           |
+| dark_sepia           | Sepia                | ![dark_sepia](https://images.habbo.com/c_images/Habbo-Stories/dark_sepia.png)                     |
+| decr_conrast         | Decrease contrast    | ![decr_conrast](https://images.habbo.com/c_images/Habbo-Stories/decr_conrast.png)                 |
+| decrease_saturation  | Decrease saturation  | ![decrease_saturation](https://images.habbo.com/c_images/Habbo-Stories/decrease_saturation.png)   |
+| drops_mpl            | Drops                | ![drops_mpl](https://images.habbo.com/c_images/Habbo-Stories/drops_mpl.png)                       |
+| finger_nrm           | Oops, finger         | ![finger_nrm](https://images.habbo.com/c_images/Habbo-Stories/finger_nrm.png)                     |
+| frame_black_2        | Black and white      | ![frame_black_2](https://images.habbo.com/c_images/Habbo-Stories/frame_black_2.png)               |
+| frame_gold           | Golden ornament      | ![frame_gold](https://images.habbo.com/c_images/Habbo-Stories/frame_gold.png)                     |
+| frame_gray_4         | Gray                 | ![frame_gray_4](https://images.habbo.com/c_images/Habbo-Stories/frame_gray_4.png)                 |
+| frame_wood_2         | Wooden               | ![frame_wood_2](https://images.habbo.com/c_images/Habbo-Stories/frame_wood_2.png)                 |
+| glitter_hrd          | Rainbow glitter      | ![glitter_hrd](https://images.habbo.com/c_images/Habbo-Stories/glitter_hrd.png)                   |
+| green                | Green                | ![green](https://images.habbo.com/c_images/Habbo-Stories/green.png)                               |
+| green_2              | Overlit green        | ![green_2](https://images.habbo.com/c_images/Habbo-Stories/green_2.png)                           |
+| hearts_hardlight_02  | Hearts               | ![hearts_hardlight_02](https://images.habbo.com/c_images/Habbo-Stories/hearts_hardlight_02.png)   |
+| hue_bright_sat       | Strange light        | ![hue_bright_sat](https://images.habbo.com/c_images/Habbo-Stories/hue_bright_sat.png)             |
+| hypersaturated       | Hypersaturated       | ![hypersaturated](https://images.habbo.com/c_images/Habbo-Stories/hypersaturated.png)             |
+| increase_contrast    | Increase contrast    | ![increase_contrast](https://images.habbo.com/c_images/Habbo-Stories/increase_contrast.png)       |
+| increase_saturation  | Increase saturation  | ![increase_saturation](https://images.habbo.com/c_images/Habbo-Stories/increase_saturation.png)   |
+| misty_hrd            | Misty                | ![misty_hrd](https://images.habbo.com/c_images/Habbo-Stories/misty_hrd.png)                       |
+| night_vision         | Night vision         | ![night_vision](https://images.habbo.com/c_images/Habbo-Stories/night_vision.png)                 |
+| pinky_nrm            | Pink haze            | ![pinky_nrm](https://images.habbo.com/c_images/Habbo-Stories/pinky_nrm.png)                       |
+| red                  | Red                  | ![red](https://images.habbo.com/c_images/Habbo-Stories/red.png)                                   |
+| rusty_mpl            | Mud stains           | ![rusty_mpl](https://images.habbo.com/c_images/Habbo-Stories/rusty_mpl.png)                       |
+| security_hardlight   | Security camera      | ![security_hardlight](https://images.habbo.com/c_images/Habbo-Stories/security_hardlight.png)     |
+| shadow_multiply_02   | Shadow               | ![shadow_multiply_02](https://images.habbo.com/c_images/Habbo-Stories/shadow_multiply_02.png)     |
+| shiny_hrd            | Shiny                | ![shiny_hrd](https://images.habbo.com/c_images/Habbo-Stories/shiny_hrd.png)                       |
+| stars_hardlight_02   | Stars                | ![stars_hardlight_02](https://images.habbo.com/c_images/Habbo-Stories/stars_hardlight_02.png)     |
+| texture_overlay      | Antique              | ![texture_overlay](https://images.habbo.com/c_images/Habbo-Stories/texture_overlay.png)           |
+| toxic_hrd            | Toxic                | ![toxic_hrd](https://images.habbo.com/c_images/Habbo-Stories/toxic_hrd.png)                       |
+| x_ray                | X-ray                | ![x_ray](https://images.habbo.com/c_images/Habbo-Stories/x_ray.png)                               |
+
+---
+
+## **11. Appendix A: JSON Schema**
 
 You can use the schema by adding [this file](./HCDS-v1_0.schema.json) as your `$schema`.
 
@@ -412,7 +461,7 @@ You can use the schema by adding [this file](./HCDS-v1_0.schema.json) as your `$
 
 ---
 
-## **11. References**
+## **12. References**
 
 - *[JSON Schema Draft 2020-12](https://json-schema.org/draft/2020-12/)*
 
