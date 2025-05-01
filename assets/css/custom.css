@@ -1,0 +1,116 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-image: url('{{ "/assets/img/bg5.png" | relative_url }}'),
+	url('{{ "/assets/img/clouds.png" | relative_url }}');
+	background-repeat: repeat, no-repeat;
+	background-position: top center;
+	background-color: #efefef;
+}
+
+header h1 img {
+	margin-right: 10px;
+}
+
+.js-toc .toc-list {
+	list-style: none;
+	counter-reset: none;
+}
+
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
+h6:hover a {
+	opacity: 1;
+}
+
+details {
+	margin-bottom: 20px;
+}
+
+details summary {
+	cursor: pointer;
+}
+
+table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	border-radius: 5px;
+	border: 1px solid #e5e5e5;
+
+	--bgColor: white;
+	--shadowColor: rgba(0, 0, 0, .5);
+}
+
+pre {
+	--bgColor: #f8f8f8;
+	--shadowColor: rgba(0, 0, 0, .2);
+}
+
+table,
+pre {
+	/* FROM https://codepen.io/Alynva/pen/KKZdwZb */
+	background:
+		linear-gradient(to right, var(--bgColor) 30%, rgba(0, 0, 0, 0)) 0 100%, linear-gradient(to right, rgba(0, 0, 0, 0), var(--bgColor) 70%) 100% 0,
+		linear-gradient(to right, var(--shadowColor) 30%, rgba(0, 0, 0, 0)) 0 100%, linear-gradient(to right, rgba(0, 0, 0, 0), var(--shadowColor) 70%) 100% 0;
+	/* radial-gradient(farthest-side at 0 50%, var(--shadowColor), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, var(--shadowColor), rgba(0, 0, 0, 0)) 100% 0; */
+	background-repeat: no-repeat;
+	background-color: var(--bgColor);
+	background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+	background-attachment: local, local, scroll, scroll;
+}
+
+table th {
+	font-weight: 600
+}
+
+table th,
+table td {
+	padding: 6px 13px;
+}
+
+table tr {
+	background-color: #ffffffaa;
+}
+
+table tr:nth-child(2n) {
+	background-color: #f6f8faaa
+}
+
+table tr:has(td:hover) {
+	background-color: #eef0f2aa
+}
+
+table tr>*:last-child {
+	width: 100%;
+}
+
+table img {
+	background-color: transparent
+}
+
+.back-to-top-link {
+	text-decoration: none;
+	color: #007bff;
+}
+
+hr {
+	background: #b3b3b3;
+}
+
+blockquote {
+	border-left-color: #b3b3b3;
+}

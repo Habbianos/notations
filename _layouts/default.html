@@ -7,105 +7,9 @@
     <link rel="shortcut icon" href="{{ "/favicon.png" | relative_url }}" type="image/png">
     <link rel="preload" href="/assets/img/bg5.png" as="image">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <style>
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-image: url('{{ "/assets/img/bg5.png" | relative_url }}'), url('{{ "/assets/img/clouds.png" | relative_url }}');
-  background-repeat: repeat, no-repeat;
-  background-position: top center;
-  background-color: #efefef;
-}
-header h1 img {
-  margin-right: 10px;
-}
-
-.js-toc .toc-list {
-  list-style: none;
-  counter-reset: none;
-}
-h2 a, h3 a, h4 a, h5 a, h6 a {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
-  opacity: 1;
-}
-details {
-  margin-bottom: 20px;
-}
-details summary {
-  cursor: pointer;
-}
-
-table {
-	display: block;
-	width: 100%;
-	overflow: auto;
-  border-radius: 5px;
-  border: 1px solid #e5e5e5;
-
-	--bgColor: white;
-	--shadowColor: rgba(0, 0, 0, .5);
-}
-pre {
-	--bgColor: #f8f8f8;
-	--shadowColor: rgba(0, 0, 0, .2);
-}
-table, pre {
-	/* FROM https://codepen.io/Alynva/pen/KKZdwZb */
-  background:
-    linear-gradient(to right, var(--bgColor) 30%, rgba(0, 0, 0, 0)) 0 100%, linear-gradient(to right, rgba(0, 0, 0, 0), var(--bgColor) 70%) 100% 0,
-    linear-gradient(to right, var(--shadowColor) 30%, rgba(0, 0, 0, 0)) 0 100%, linear-gradient(to right, rgba(0, 0, 0, 0), var(--shadowColor) 70%) 100% 0;
-    /* radial-gradient(farthest-side at 0 50%, var(--shadowColor), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, var(--shadowColor), rgba(0, 0, 0, 0)) 100% 0; */
-  background-repeat: no-repeat;
-  background-color: var(--bgColor);
-  background-size: 40px 100% , 40px 100%, 14px 100%, 14px 100%;
-  background-attachment: local, local, scroll, scroll;
-}
-
-table th {
-	font-weight: 600
-}
-
-table th,
-table td {
-	padding: 6px 13px;
-}
-
-table tr {
-	background-color: #ffffffaa;
-}
-
-table tr:nth-child(2n) {
-	background-color: #f6f8faaa
-}
-
-table tr:has(td:hover) {
-	background-color: #eef0f2aa
-}
-
-table tr > *:last-child {
-  width: 100%;
-}
-
-table img {
-	background-color: transparent
-}
-.back-to-top-link {
-  text-decoration: none;
-  color: #007bff;
-}
-hr {
-  background: #b3b3b3;
-}
-blockquote {
-  border-left-color: #b3b3b3;
-}
-    </style>
+    <link rel="stylesheet" href="{{ "/assets/css/custom.css?v=" | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
   <body>
@@ -179,60 +83,9 @@ blockquote {
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tocbot@4.11.0/dist/tocbot.min.js"></script>
-    <script>
-        tocbot.init({
-          tocSelector: '.js-toc',     // where the ToC will be inserted
-          contentSelector: 'section', // where to look for headings
-          headingSelector: 'h2, h3' , // which headings to include in the ToC
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-    <script>
-       anchors.add();
-    </script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const headers = document.querySelectorAll("h2, h3, h4, h5, h6");
-
-  document.querySelector(".back-to-top-link").addEventListener("click", function(e) {
-    e.preventDefault(); // Cancel default anchor behavior
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
-  })
-  
-  headers.forEach(header => {
-    header.style.position = "relative";
-
-    const backToTopLink = document.createElement("a");
-    backToTopLink.href = "#";
-    backToTopLink.textContent = "Back to top";
-    backToTopLink.classList.add("back-to-top-link")
-
-    Object.assign(backToTopLink.style, {
-      position: "absolute",
-      right: "0",
-      top: "50%",
-      transform: "translateY(-50%)",
-      fontSize: "0.8em",
-      padding: "0 5px",
-      backgroundColor: "rgb(225 225 225)",
-    });
-
-    backToTopLink.addEventListener("click", function(e) {
-        e.preventDefault(); // Cancel default anchor behavior
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    });
-
-    header.appendChild(backToTopLink);
-  });
-});
-    </script>
-</body>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tocbot@4.11.0/dist/tocbot.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js" defer></script>
+    <script src="/assets/js/init.js" defer></script>
+  </body>
 </html>
