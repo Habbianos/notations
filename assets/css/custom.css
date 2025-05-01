@@ -3,8 +3,6 @@ html {
 }
 
 body {
-	background-image: url('{{ "/assets/img/bg5.png" | relative_url }}'),
-	url('{{ "/assets/img/clouds.png" | relative_url }}');
 	background-repeat: repeat, no-repeat;
 	background-position: top center;
 	background-color: #efefef;
