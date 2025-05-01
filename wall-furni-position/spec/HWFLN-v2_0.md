@@ -12,7 +12,7 @@
 
 ### **1.1. Abstract**
 
-**Habbo Wall Furni Location Notation (HWFLN) v2** is a text-based notation designed to represent the placement of wall furniture items within a Habbo Hotel room. It encodes the grid location, pixel offsets relative to that grid point, and the wall side (left or right) as a single compact string.
+**Habbo Wall Furni Location Notation (HWFLN) v2** is a standard for the text-based notation designed to represent the placement of wall furniture items within a Habbo Hotel room. It encodes the grid location, pixel offsets relative to that grid point, and the wall side (left or right) as a single compact string.
 
 While HWFLN v2 reflects the wall furni location definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
 
@@ -204,3 +204,5 @@ Strict adherence to the syntax and processing guidelines is required for safe im
   - Initial draft of the HWFLN specification.
 - **v2.0.1 - 2025-04-29**
   - Migrated from `v1` to `v2` to let the `v1` be the older unknown implementation.
+- **v2.0.2 - 2025-04-30**
+  - Minor touches in the Abstract section.

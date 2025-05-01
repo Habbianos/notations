@@ -12,7 +12,7 @@
 
 ### **1.1 Abstract**
 
-**Habbo Camera Data Structure (HCDS) v1** is a standard for the JSON schema designed to repsesent a snapshot of a room scene for the camera system of Habbo Hotel. It encodes metadata, graphical components such as planes and sprites, filter effects, and rendering state information.
+**Habbo Camera Data Structure (HCDS) v1** is a standard for the JSON schema designed to represent a snapshot of a room scene for the camera system of Habbo Hotel. It encodes metadata, graphical components such as planes and sprites, filter effects, and rendering state information.
 
 While HCDS v1 reflects how Habbo Hotel interprets a room schene, it is **not an official Sulake data structure**, and future changes may not be adopted by Sulake.
 
@@ -471,3 +471,5 @@ You can use the schema by adding [this file](./HCDS-v1_0.schema.json) as your `$
 
 - **v1.0.0 – 2025-04-29**
   - Initial draft of the HCDS specification.
+- **v1.0.1 - 2025-04-30**
+  - Minor touches in the Abstract section.

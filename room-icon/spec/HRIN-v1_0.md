@@ -12,7 +12,7 @@
 
 ### **1.1 Abstract**
 
-**Habbo Room Icon Notation (HRIN) v1.0** is a standard for text-based notation designed to represent room icons in a compact, human- and machine-readable form. It encodes the background, top-layer style, and a set of optional items (with their positions and identifiers) as a single string, facilitating storage, parsing, generation, and interoperability of room icon configurations.
+**Habbo Room Icon Notation (HRIN) v1.0** is a standard for the text-based notation designed to represent room icons in a compact, human- and machine-readable form. It encodes the background, top-layer style, and a set of optional items (with their positions and identifiers) as a single string, facilitating storage, parsing, generation, and interoperability of room icon configurations.
 
 While HRIN v1 reflects the room icon definition, it is not an official format maintained by Sulake. Future updates or extensions may not be adopted by the company.
 
@@ -311,3 +311,5 @@ The following tables list the approved asset mappings. Implementers and develope
 
 - **v1.0.0 - 2025-04-18**
   - Initial draft of the HRIN specification.
+- **v1.0.1 - 2025-04-30**
+  - Minor touches in the Abstract section.
