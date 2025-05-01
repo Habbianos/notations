@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       transform: "translateY(-50%)",
       fontSize: "0.8em",
       padding: "0 5px",
-      backgroundColor: "rgb(225 225 225)",
+      backgroundColor: "rgb(239 239 239)",
     });
 
     backToTopLink.addEventListener("click", scrollToTop);
