@@ -1,8 +1,11 @@
 # **Habbo Avatar Figure Notation (HAFN) v2.0**
 
 - **Status da Especificação:** Candidato
-- **Data:** 2025-04-27
+- **Data:** 2025-05-02
 - **Disponível em:** [Inglês (original)](./HAFN-v2_0.md) • Português • [Espanhol](./HAFN-v2_0-es.md)
+
+> ![NOTE]
+> Este documento é uma tradução [do original](./HAFN-v2_0.md). Caso observe inconsistências em relação ao conteúdo do jogo neste idioma, por favor, [nos avise](https://github.com/Habbianos/notations/issues/new/choose) para que possamos corrigir a localização.
 
 <details><summary>Sumário</summary>
 <div class="js-toc"></div>
@@ -288,3 +291,5 @@ A tabela a seguir lista os **identificadores de duas letras atualmente suportado
   - Ajustes menores no rascunho.
 - **v2.0.6 - 2025-04-27**
   - Seção de tabela de referência adicionada
+- **v2.0.7 - 2025-05-02**
+  - Observação nas versões traduzidas adicionada
