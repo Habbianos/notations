@@ -215,8 +215,8 @@ Strict adherence to the syntax and processing guidelines is required for safe im
 
 ## **10. References**
 
-- [1] *Habbo Groups API*, Habbo.com.br. Available at: https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d
-- [2] *Habbo Group Badge Render Service*, Habbo.com.br. Available at: https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png (also available in `.gif` format and through the `badge-fill` variant for non-transparent backgrounds)
+- [1] *Habbo Groups API*, Habbo.com.br. Available at: [https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
+- [2] *Habbo Group Badge Render Service*, Habbo.com.br. Available at: [https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (also available in `.gif` format and through the `badge-fill` variant for non-transparent backgrounds)
 
 ---
 

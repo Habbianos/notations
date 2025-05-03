@@ -237,11 +237,11 @@ Strict adherence to the syntax and processing guidelines is required for safe im
 
 ## **11. References**
 
-- [1] *Habbo `figuredata` XML*, Habbo.com. Available at: https://www.habbo.com/gamedata/figuredata/1
-- [2] *Habbo `external_flash_texts` Definition*, Habbo.com. Available at: https://www.habbo.com/gamedata/external_flash_texts/1
-- [3] *Habbo Avatar Render Service*, Habbo.com.br. Available at: https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b
-- [4] *Habbo Imager*, Pixels Emotions (fan site). Available at: https://pixelsemotion.tumblr.com/habbo-imager
-- [5] *Figure Editor*, Habbo News (fan site). Available at: https://www.habbonews.net/p/habbo-visuais.html
+- [1] *Habbo `figuredata` XML*, Habbo.com. Available at: [https://www.habbo.com/gamedata/figuredata/1](https://www.habbo.com/gamedata/figuredata/1)
+- [2] *Habbo `external_flash_texts` Definition*, Habbo.com. Available at: [https://www.habbo.com/gamedata/external_flash_texts/1](https://www.habbo.com/gamedata/external_flash_texts/1)
+- [3] *Habbo Avatar Render Service*, Habbo.com.br. Available at: [https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b](https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b)
+- [4] *Habbo Imager*, Pixels Emotions (fan site). Available at: [https://pixelsemotion.tumblr.com/habbo-imager](https://pixelsemotion.tumblr.com/habbo-imager)
+- [5] *Figure Editor*, Habbo News (fan site). Available at: [https://www.habbonews.net/p/habbo-visuais.html](https://www.habbonews.net/p/habbo-visuais.html)
 
 ---
 

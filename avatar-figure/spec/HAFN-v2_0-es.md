@@ -239,11 +239,11 @@ La estricta adherencia al syntax y a las directrices de procesamiento son requer
 
 ## **11. Referencias**
 
-- [1] *XML `figuredata` de Habbo*, Habbo.es. Disponible en: https://www.habbo.es/gamedata/figuredata/1
-- [2] *Definición `external_flash_texts` de Habbo*, Habbo.es. Disponible en: https://www.habbo.es/gamedata/external_flash_texts/1
-- [3] *Servicio de Renderizado de Avatar de Habbo*, Habbo.com.br. Disponible en: https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b
-- [4] *Habbo Imager*, Pixels Emotions (sitio de fans). Disponible en: https://pixelsemotion.tumblr.com/habbo-imager
-- [5] *Editor de Figuras*, Habbo News (sitio de fans). Disponible en: https://www.habbonews.net/p/habbo-visuais.html
+- [1] *XML `figuredata` de Habbo*, Habbo.es. Disponible en: [https://www.habbo.es/gamedata/figuredata/1](https://www.habbo.es/gamedata/figuredata/1)
+- [2] *Definición `external_flash_texts` de Habbo*, Habbo.es. Disponible en: [https://www.habbo.es/gamedata/external_flash_texts/1](https://www.habbo.es/gamedata/external_flash_texts/1)
+- [3] *Servicio de Renderizado de Avatar de Habbo*, Habbo.com.br. Disponible en: [https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b](https://www.habbo.com.br/habbo-imaging/avatarimage?user=alynva&direction=2&head_direction=3&gesture=sml&action=wlk,crr=1&size=b)
+- [4] *Habbo Imager*, Pixels Emotions (sitio de fans). Disponible en: [https://pixelsemotion.tumblr.com/habbo-imager](https://pixelsemotion.tumblr.com/habbo-imager)
+- [5] *Editor de Figuras*, Habbo News (sitio de fans). Disponible en: [https://www.habbonews.net/p/habbo-visuais.html](https://www.habbonews.net/p/habbo-visuais.html)
 
 ---
 
