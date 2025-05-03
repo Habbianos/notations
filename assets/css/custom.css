@@ -129,3 +129,10 @@ blockquote {
 .markdown-alert .markdown-alert-title {
 	margin-bottom: 1rem;
 }
+
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+	margin: 0;
+}
