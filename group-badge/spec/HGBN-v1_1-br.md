@@ -4,7 +4,7 @@
 - **Data:** 2025-05-02
 - **Disponível em:** [Inglês (original)](./HGBN-v1_1.md) • Português • [Espanhol](./HGBN-v1_1-es.md)
 
-> [!NOTE]
+> [!NOTE] Nota
 > Este documento é uma tradução [do original](./HGBN-v1_1.md). Caso observe inconsistências em relação ao conteúdo do jogo neste idioma, por favor, [nos avise](https://github.com/Habbianos/notations/issues/new/choose) para que possamos corrigir a localização.
 
 <details><summary>Sumário</summary>
@@ -84,7 +84,7 @@ Uma string HGBN válida **DEVE**:
 
 Uma string HGBN v1 representa um emblema completo concatenando múltiplos segmentos de seis caracteres. A string sempre começa pelo recurso base (identificado por `b`), seguido pelos símbolos sobrepostos (identificados por `s` ou `t`).
 
-> [!NOTE]
+> [!NOTE] Nota
 > O hash final no nome do arquivo (por exemplo, `b01bfc395d8c4be707922c3da5b3f561`) provavelmente é usado para cache de imagem e segurança e **é ignorado na especificação da notação**.
 
 ### **5.2. Gramática**

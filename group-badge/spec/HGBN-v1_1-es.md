@@ -4,7 +4,7 @@
 - **Date:** 2025-05-02
 - **Available in:** [Inglés (original)](./HGBN-v1_1.md) • [Portugués](./HGBN-v1_1-br.md) • Español
 
-> [!NOTE]
+> [!NOTE] Nota
 > Este documento es una traducción [del original](./HGBN-v1_1.md). Si observas inconsistencias con el contenido del juego en este idioma, por favor, [avísanos](https://github.com/Habbianos/notations/issues/new/choose) para que podamos corregir la localización.
 
 <details><summary>Índice</summary>
@@ -84,7 +84,7 @@ Una cadena HGBN válida **DEBE**:
 
 Una cadena HGBN v1 representa un emblema completo concatenando múltiples segmentos de seis caracteres. La cadena siempre comienza con el recurso que debe estar en la base (identificado por `b`), seguido por los recursos superiores (símbolos, identificados por `s` o `t`).
 
-> [!NOTE]
+> [!NOTE] Nota
 > El hash final en el nombre de archivo (por ejemplo, `b01bfc395d8c4be707922c3da5b3f561`) probablemente se usa para caché y seguridad de imágenes, y **se IGNORA en la especificación de notación**.
 
 ### **5.2. Gramática**
