@@ -213,11 +213,46 @@ Strict adherence to the syntax and processing guidelines is required for safe im
 
 ---
 
-## **10. Reference Tables for Group Badge Assets**
+## **10. References**
+
+- [1] *Habbo Groups API*, Habbo.com.br. Available at: https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d
+- [2] *Habbo Group Badge Render Service*, Habbo.com.br. Available at: https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png (also available in `.gif` format and through the `badge-fill` variant for non-transparent backgrounds)
+
+---
+
+## **11. Contributors**
+
+This document was developed with contributions from:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigation
+
+---
+
+## **12. Changelog**
+
+- **v1.1.0 - 2025-04-12**
+  - Updating from `v1.0` due to new information found.
+  - Filling the reference tables.
+  - Fixing the zero-indexed position ids.
+  - Minor touches of the draft.
+- **v1.1.1 - 2025-04-17**
+  - Standardizing the spec structure.
+  - Minor touches of the draft.
+- **v1.1.2 - 2025-04-18**
+  - Minor grammar fixes.
+- **v1.1.3 - 2025-05-02**
+  - Markdown Alert tag fix.
+  - Added Contributors Section.
+  - Reorganized the last sections and renamed the Reference Table to Appendices.
+
+---
+
+## **13. Appendices**
 
 The following tables list the approved asset mappings. Implementers and developers can use these tables as a reference for rendering badge components. The tables are sorted using the asset name, and where it says the index of it, it means the position in the game's list, followed by the number `row x column` of it, for ease navigation.
 
-### **10.1. Base Assets**
+### **13.1. Appendix A. Group Badge Base Assets**
 
 | Notation Prefix | Notation Id | Asset Id | Asset Name ▲ | Asset Index | Has Mask? | Colorable Image                                                                                       | Mask Image                                                                                            |
 |-----------------|-------------|----------|--------------|-------------|-----------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -250,7 +285,7 @@ The following tables list the approved asset mappings. Implementers and develope
 | `b`             | `23`        | 67       | simplestar   | 23º (5x4)   | Yes       | ![simplestar_part2](https://images.habbo.com/c_images/Badgeparts/badgepart_base_simplestar_part2.png) | ![simplestar_part1](https://images.habbo.com/c_images/Badgeparts/badgepart_base_simplestar_part1.png) |
 | `b`             | `24`        | 68       | spiral       | 24º (5x5)   | No        | ![spiral](https://images.habbo.com/c_images/Badgeparts/badgepart_base_spiral.png)                     |                                                                                                       |
 
-### **10.2. Symbol Assets**
+### **13.2. Appendix B. Group Badge Symbol Assets**
 
 | Notation Prefix | Notation Id | Asset Id | Asset Name ▲     | Asset Index | Has Mask? | Colorable Image                                                                                                                          | Mask Image                                                                                                                               |
 |-----------------|-------------|----------|------------------|-------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -413,7 +448,7 @@ The following tables list the approved asset mappings. Implementers and develope
 | `t`             | `02`        | 207      | y                | 153º (31x4) | No        | ![badgepart_symbol_y.png](https://images.habbo.com/c_images/Badgeparts/badgepart_symbol_y.png)                                           |                                                                                                                                          |
 | `t`             | `03`        | 208      | z                | 154º (31x5) | No        | ![badgepart_symbol_z.png](https://images.habbo.com/c_images/Badgeparts/badgepart_symbol_z.png)                                           |                                                                                                                                          |
 
-### **10.3. Color IDs and Tints**
+### **13.3. Appendix C. Group Badge Color IDs and Tints**
 
 | Id   | Color Index | Hex Color | Preview                                                   |
 |------|-------------|-----------|-----------------------------------------------------------|
@@ -442,7 +477,7 @@ The following tables list the approved asset mappings. Implementers and develope
 | `24` | 23º (3x7)   | `#7a7a7a` | ![Preview](https://singlecolorimage.com/get/7a7a7a/10x10) |
 | `13` | 24º (3x8)   | `#373737` | ![Preview](https://singlecolorimage.com/get/373737/10x10) |
 
-### **10.4. Grid Positions**
+### **13.4. Appendix D. Group Badge Grid Positions**
 
 | **Position Id** | **Grid Cell**    |
 |-----------------|------------------|
@@ -455,35 +490,3 @@ The following tables list the approved asset mappings. Implementers and develope
 | 6               | Bottom-left      |
 | 7               | Bottom-center    |
 | 8               | Bottom-right     |
-
----
-
-## **11. References**
-
-- *[Habbo Groups API](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)*
-- *[Habbo Group Badge Render Service](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (also avaliable as `.gif` and from `badge-fill` for non-transparent background)*
-
----
-
-### **Contributors**
-
-This document was developed with contributions from:
-
-- **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author
-- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigation
-
-### **Changelog**
-
-- **v1.1.0 - 2025-04-12**
-  - Updating from `v1.0` due to new information found.
-  - Filling the reference tables.
-  - Fixing the zero-indexed position ids.
-  - Minor touches of the draft.
-- **v1.1.1 - 2025-04-17**
-  - Standardizing the spec structure.
-  - Minor touches of the draft.
-- **v1.1.2 - 2025-04-18**
-  - Minor grammar fixes.
-- **v1.1.3 - 2025-05-02**
-  - Markdown Alert tag fix.
-  - Added Contributors Section

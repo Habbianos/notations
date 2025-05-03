@@ -216,11 +216,46 @@ A adesão estrita à sintaxe e às diretrizes de processamento é necessária pa
 
 ---
 
-## **10. Tabela de Referência para Ativos de Emblema de Grupo**
+## **10. Referências**
+
+- [1] *API de Grupos do Habbo*, Habbo.com.br. Disponível em: https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d
+- [2] *Serviço de Renderização de Emblemas de Grupo do Habbo*, Habbo.com.br. Disponível em: https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png (também disponível no formato `.gif` e pela variante `badge-fill` para fundo opaco)
+
+---
+
+## **11. Contribuidores**
+
+Este documento foi desenvolvido com contribuições de:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigação
+
+---
+
+## **12. Registro de Mudanças**
+
+- **v1.1.0 – 2025‑04‑12**
+  - Atualização a partir da `v1.0` com base em novas informações encontradas.
+  - Preenchimento das tabelas de referência.
+  - Correção dos IDs de posição com índice zero.
+  - Ajustes menores no rascunho.
+- **v1.1.1 – 2025‑04‑17**
+  - Padronização da estrutura da especificação.
+  - Ajustes menores no rascunho.
+- **v1.1.2 – 2025‑04‑18**
+  - Ajustes gramaticais menores.
+- **v1.1.3 - 2025-05-02**
+  - Correção da tag Alerta de Markdown.
+  - Seção de Colaboradores Adicionada.
+  - Reorganização das últimas seções e renomeação da Tabela de Referência para Apêndices.
+
+---
+
+## **13. Apêndices**
 
 As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e desenvolvedores podem usar estas tabelas como referência para renderizar componentes de emblema. As tabelas estão ordenadas pelo nome do ativo; o “índice” indica a posição na lista do jogo, seguido de `linha × coluna` para facilitar a navegação.
 
-### **10.1. Ativos Base**
+### **13.1. Apêndice A. Emblema de Grupo Ativos Base**
 
 | Prefixo de Notação | ID de Notação | ID do Recurso | Nome do Recurso ▲ | Índice do Recurso | Possui Máscara? | Imagem Colorível                                                                                      | Imagem de Máscara                                                                                     |
 |--------------------|---------------|---------------|-------------------|-------------------|-----------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -253,7 +288,7 @@ As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e
 | `b`                | `23`          | 67            | simplestar        | 23º (5x4)         | Sim             | ![simplestar_part2](https://images.habbo.com/c_images/Badgeparts/badgepart_base_simplestar_part2.png) | ![simplestar_part1](https://images.habbo.com/c_images/Badgeparts/badgepart_base_simplestar_part1.png) |
 | `b`                | `24`          | 68            | spiral            | 24º (5x5)         | Não             | ![spiral](https://images.habbo.com/c_images/Badgeparts/badgepart_base_spiral.png)                     |                                                                                                       |
 
-### **10.2. Ativos de Símbolo**
+### **13.2. Apêndice B. Emblema de Grupo Ativos de Símbolo**
 
 | Prefixo de Notação | ID de Notação | ID do Recurso | Nome do Recurso ▲ | Índice do Recurso | Possui Máscara? | Imagem Colorível                                                                                                                         | Imagem de Máscara                                                                                                                        |
 |--------------------|---------------|---------------|-------------------|-------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -416,7 +451,7 @@ As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e
 | `t`                | `02`          | 207           | y                 | 153º (31x4)       | Não             | ![badgepart_symbol_y.png](https://images.habbo.com/c_images/Badgeparts/badgepart_symbol_y.png)                                           |                                                                                                                                          |
 | `t`                | `03`          | 208           | z                 | 154º (31x5)       | Não             | ![badgepart_symbol_z.png](https://images.habbo.com/c_images/Badgeparts/badgepart_symbol_z.png)                                           |                                                                                                                                          |
 
-### **10.3. IDs de Cor e Tonalidades**
+### **13.3. Apêndice C. Emblema de Grupo IDs de Cor e Tonalidades**
 
 | ID   | Índice de Cor | Cor Hex   | Visualização                                              |
 |------|---------------|-----------|-----------------------------------------------------------|
@@ -445,7 +480,7 @@ As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e
 | `24` | 23º (3x7)     | `#7a7a7a` | ![Preview](https://singlecolorimage.com/get/7a7a7a/10x10) |
 | `13` | 24º (3x8)     | `#373737` | ![Preview](https://singlecolorimage.com/get/373737/10x10) |
 
-### **10.4. Posições na Grade**
+### **13.4. Apêndice D. Emblema de Grupo Posições na Grade**
 
 | ID de Posição | Célula da Grade   |
 |---------------|-------------------|
@@ -458,35 +493,3 @@ As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e
 | 6             | Inferior-esquerda |
 | 7             | Inferior-centro   |
 | 8             | Inferior-direita  |
-
----
-
-## **11. Referências**
-
-- *[API de Grupos Habbo](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)*
-- *[Serviço de Renderização de Emblemas de Grupo Habbo](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png)* (também disponível em `.gif` e via `badge-fill` para fundo não transparente)
-
----
-
-### **Contribuidores**
-
-Este documento foi desenvolvido com contribuições de:
-
-- **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
-- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigação
-
-### **Registro de Mudanças**
-
-- **v1.1.0 – 2025‑04‑12**
-  - Atualização a partir da `v1.0` com base em novas informações encontradas.
-  - Preenchimento das tabelas de referência.
-  - Correção dos IDs de posição com índice zero.
-  - Ajustes menores no rascunho.
-- **v1.1.1 – 2025‑04‑17**
-  - Padronização da estrutura da especificação.
-  - Ajustes menores no rascunho.
-- **v1.1.2 – 2025‑04‑18**
-  - Ajustes gramaticais menores.
-- **v1.1.3 - 2025-05-02**
-  - Correção da tag Alerta de Markdown.
-  - Seção de Colaboradores Adicionada
