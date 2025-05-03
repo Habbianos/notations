@@ -468,6 +468,13 @@ As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e
 
 ---
 
+### **Contribuidores**
+
+Este documento foi desenvolvido com contribuições de:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigação
+
 ### **Registro de Mudanças**
 
 - **v1.1.0 – 2025‑04‑12**
@@ -482,3 +489,4 @@ As tabelas a seguir listam os mapeamentos aprovados de ativos. Implementadores e
   - Ajustes gramaticais menores.
 - **v1.1.3 - 2025-05-02**
   - Correção da tag Alerta de Markdown.
+  - Seção de Colaboradores Adicionada

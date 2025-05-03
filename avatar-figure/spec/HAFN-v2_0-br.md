@@ -269,6 +269,14 @@ A tabela a seguir lista os **identificadores de duas letras atualmente suportado
 
 ---
 
+### **Contribuidores**
+
+Este documento foi desenvolvido com contribuições de:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigação
+- **["uzuki"](https://x.com/uzukies)**: Escrita (Revisão e Edição)
+
 ### **Registro de Mudanças**
 
 - **v2.0.0 – 2025-04-07**
@@ -293,3 +301,4 @@ A tabela a seguir lista os **identificadores de duas letras atualmente suportado
   - Seção de tabela de referência adicionada
 - **v2.0.7 - 2025-05-02**
   - Observação nas versões traduzidas adicionada
+  - Seção de Colaboradores Adicionada

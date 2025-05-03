@@ -269,6 +269,14 @@ La siguiente tabla enumera los **identificadores de dos letras actualmente sopor
 
 ---
 
+### **Colaboradores**
+
+Este documento fue desarrollado con contribuciones de:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigación
+- **["uzuki"](https://x.com/uzukies)**: Escritura (Revisión y Edición)
+
 ### **Registro de Cambios**
 
 - **v2.0.0 – 2025-04-07**
@@ -293,3 +301,4 @@ La siguiente tabla enumera los **identificadores de dos letras actualmente sopor
   - Sección de tabla de referencia agregada
 - **v2.0.7 - 2025-05-02**
   - Se añadió una observación en las versiones traducidas
+  - Sección de colaboradores añadidos

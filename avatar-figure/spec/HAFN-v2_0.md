@@ -267,6 +267,14 @@ The following table lists the **currently supported two-letter identifiers** use
 
 ---
 
+### **Contributors**
+
+This document was developed with contributions from:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigation
+- **["uzuki"](https://x.com/uzukies)**: Writing (Review & Editing)
+
 ### **Changelog**
 
 - **v2.0.0 – 2025-04-07**
@@ -291,3 +299,4 @@ The following table lists the **currently supported two-letter identifiers** use
   - Added Reference Table Section
 - **v2.0.7 - 2025-05-02**
   - Added observation in the tranlated versions
+  - Added Contributors Section

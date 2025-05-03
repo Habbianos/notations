@@ -466,6 +466,13 @@ Las siguientes tablas enumeran los mapeos de activos aprobados. Los implementado
 
 ---
 
+### **Colaboradores**
+
+Este documento fue desarrollado con contribuciones de:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigación
+
 ### **Registro de Cambios**
 
 - **v1.1.0 – 2025‑04‑12**
@@ -480,3 +487,4 @@ Las siguientes tablas enumeran los mapeos de activos aprobados. Los implementado
   - Correcciones gramaticales menores.
 - **v1.1.3 - 2025-05-02**
   - Corrección de la etiqueta de alerta de Markdown.
+  - Sección de colaboradores añadidos

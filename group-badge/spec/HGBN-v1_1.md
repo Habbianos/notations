@@ -465,6 +465,13 @@ The following tables list the approved asset mappings. Implementers and develope
 
 ---
 
+### **Contributors**
+
+This document was developed with contributions from:
+
+- **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author
+- **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigation
+
 ### **Changelog**
 
 - **v1.1.0 - 2025-04-12**
@@ -479,3 +486,4 @@ The following tables list the approved asset mappings. Implementers and develope
   - Minor grammar fixes.
 - **v1.1.3 - 2025-05-02**
   - Markdown Alert tag fix.
+  - Added Contributors Section
