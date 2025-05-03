@@ -47,20 +47,20 @@ body {
 
         <nav class="breadcrumbs">
           <a href="{{ '/' | relative_url }}">Home</a>
-          {% assign clean_url = page.url | remove: '"' %}
-          {% assign parts = clean_url | split: '/' %}
-          {% assign path = "" %}
-          {% for part in parts %}
-            {% if part == "" or part == '""' or part == "spec" %}
-              {% continue %}
-            {% endif %}
-            {% assign path = path | append: "/" | append: part %}
-            {% if forloop.last %}
+          {%- assign clean_url = page.url | remove: '"' -%}
+          {%- assign parts = clean_url | split: '/' -%}
+          {%- assign path = "" -%}
+          {%- for part in parts -%}
+            {%- if part == "" or part == '""' or part == "spec" -%}
+              {%- continue -%}
+            {%- endif -%}
+            {%- assign path = path | append: "/" | append: part -%}
+            {%- if forloop.last -%}
               &nbsp;/&nbsp;<span>{{ part | replace:'-',' ' | replace:'.html','' | replace:'_','.' }}</span>
-            {% else %}
+            {%- else -%}
               &nbsp;/&nbsp;<a href="{{ path | relative_url }}">{{ part | replace:'-',' ' }}</a>
-            {% endif %}
-          {% endfor %}
+            {%- endif -%}
+          {%- endfor -%}
         </nav>
       </header>
 
