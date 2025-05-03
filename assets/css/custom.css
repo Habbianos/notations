@@ -119,3 +119,12 @@ hr {
 blockquote {
 	border-left-color: #b3b3b3;
 }
+
+.markdown-alert {
+	background-color: rgba(255 255 255 / 0.4);
+	border-radius: 5px;
+}
+
+.markdown-alert .markdown-alert-title {
+	margin-bottom: 1rem;
+}
