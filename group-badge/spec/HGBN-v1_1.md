@@ -1,8 +1,8 @@
 # **Habbo Group Badge Notation (HGBN) v1.1**
 
-- **Specification Status:** Draft
-- **Date:** 2025-04-18
-- **Available in:** English
+- **Specification Status:** Candidate
+- **Date:** 2025-05-02
+- **Available in:** English (original) • [Portuguese](./HGBN-v1_1-br.md) • [Spanish](./HGBN-v1_1-es.md)
 
 <details><summary>Table of Contents</summary>
 <div class="js-toc"></div>
