@@ -269,7 +269,7 @@ A tabela a seguir lista os **identificadores de duas letras atualmente suportado
 
 ---
 
-### **Changelog**
+### **Registro de Mudanças**
 
 - **v2.0.0 – 2025-04-07**
   - Rascunho inicial da especificação Habbo Avatar Figure Notation (HAFN).
