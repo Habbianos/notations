@@ -50,6 +50,9 @@ We follow a versioning strategy similar to [Semver](https://semver.org/), where 
 
 This means that for referencing a notation, using only the `v[FORMAT].[EXTENSION]` version number is enough. Additional suffixes may be appended to indicate context-specific adaptations of the specification (e.g., unofficial extensions or environment-specific versions).
 
+> [!NOTE]
+> Translated versions of a specification do not influence versioning. Fixes or updates made solely to improve translations/localizations, such as correcting grammar, rewording for clarity, or aligning formatting, do not trigger a change in the document version or its changelog. These documents are expected to faithfully mirror the structure and intent of the original version.
+
 ---
 
 ## Lifecycle
