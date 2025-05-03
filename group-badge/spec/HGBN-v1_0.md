@@ -1,7 +1,7 @@
 # **Habbo Group Badge Notation (HGBN) v1.0**
 
 - **Specification Status:** Draft
-- **Date:** 2025-04-18
+- **Date:** 2025-05-02
 - **Available in:** English
 
 <details><summary>Table of Contents</summary>
@@ -81,7 +81,7 @@ A valid HGBN string **MUST**:
 
 A HGBN v1 string represents a complete badge by concatenating multiple six-character segments. The string is always ordered starting with the asset that should be at the bottom (base, identified by `b`), followed by the assets on top (symbols, identified by `s`).
 
-> ![NOTE]
+> [!NOTE]
 > The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**.
 
 ### **5.2. Grammar**
@@ -262,3 +262,5 @@ Strict adherence to the syntax and processing guidelines is required for safe im
   - Minor touches of the draft.
 - **v1.0.3 - 2025-04-18**
   - Minor grammar fixes.
+- **v1.0.4 - 2025-05-02**
+  - Markdown Alert tag fix.

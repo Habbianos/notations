@@ -4,7 +4,7 @@
 - **Fecha:** 2025-05-02
 - **Disponible en:** [Inglés (original)](./HAFN-v2_0.md) • [Portugués](./HAFN-v2_0-br.md) • Español
 
-> ![NOTE]
+> [!NOTE]
 > Este documento es una traducción [del original](./HAFN-v2_0.md). Si observas inconsistencias con el contenido del juego en este idioma, por favor, [avísanos](https://github.com/Habbianos/notations/issues/new/choose) para que podamos corregir la localización.
 
 <details><summary>Índice</summary>
@@ -230,7 +230,7 @@ Aunque HAFN v2 es una notación textual y **no ejecuta código**, las implementa
 - Ataques de inyección
 - Renderización incorrecta debido a inputs malformadas
 
-> [!IMPORTANTE]
+> [!IMPORTANT]
 > Las strings HAFN v2 **no verifican la propiedad** de ropa o colores. **Solo representan la apariencia** y no deben usarse para imponer acceso o la propiedad de partes de la figura.
 
 La estricta adherencia al syntax y a las directrices de procesamiento son requeridas para una implementación segura.

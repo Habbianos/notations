@@ -4,7 +4,7 @@
 - **Date:** 2025-05-02
 - **Available in:** [Inglés (original)](./HGBN-v1_1.md) • [Portugués](./HGBN-v1_1-br.md) • Español
 
-> ![NOTE]
+> [!NOTE]
 > Este documento es una traducción [del original](./HGBN-v1_1.md). Si observas inconsistencias con el contenido del juego en este idioma, por favor, [avísanos](https://github.com/Habbianos/notations/issues/new/choose) para que podamos corregir la localización.
 
 <details><summary>Índice</summary>
@@ -29,7 +29,7 @@ Aunque HGBN v1 refleja la definición actual del diseño de insignias, **no es u
 
 Esta especificación existe para formalizar y documentar cómo Habbo Hotel procesa **componentes de insignias de grupo**. Está dirigida a:
 
-- **Una especificación no oficial**, lo que significa que Sulake puede no adoptar las actualizaciones.  
+- **Una especificación no oficial**, lo que significa que Sulake puede no adoptar las actualizaciones.
 - **Destinada a documentación e interoperabilidad**, permitiendo que desarrolladores analicen, generen y manipulen insignias de grupo fuera del juego.
 
 HGBN **no es un estándar mantenido por Sulake**, y sus extensiones futuras **PUEDEN NO** reflejarse en la implementación del juego.
@@ -38,13 +38,13 @@ HGBN **no es un estándar mantenido por Sulake**, y sus extensiones futuras **PU
 
 HGBN v1 es una representación textual de símbolos en capas diseñada para:
 
-- **Almacenar configuraciones de insignias** como una cadena de texto compacta  
-- **Análisis y generación programática** por desarrolladores e investigadores  
-- Facilitar la **interoperabilidad** de herramientas que representen, manipulen o analicen insignias de grupo de Habbo  
+- **Almacenar configuraciones de insignias** como una cadena de texto compacta
+- **Análisis y generación programática** por desarrolladores e investigadores
+- Facilitar la **interoperabilidad** de herramientas que representen, manipulen o analicen insignias de grupo de Habbo
 
 ### **1.3. Audiencia**
 
-Esta especificación está dirigida a desarrolladores, investigadores, archivistas y entusiastas de la comunidad de Habbo Hotel, particularmente aquellos que trabajan en herramientas para insignias de grupo de Habbo. También sirve como referencia común para comprender, implementar y manipular la Notación de Insignias de Grupo de Habbo (HGBN), que puede usarse en tareas como el desarrollo de software interoperable, emuladores y documentación para proyectos de fans. El público también incluye científicos de datos que puedan utilizar esta notación en investigaciones o análisis relacionados con imágenes. Se recomienda, pero no es obligatorio, familiaridad con conceptos básicos de programación, manipulación de cadenas y manipulación de imágenes.  
+Esta especificación está dirigida a desarrolladores, investigadores, archivistas y entusiastas de la comunidad de Habbo Hotel, particularmente aquellos que trabajan en herramientas para insignias de grupo de Habbo. También sirve como referencia común para comprender, implementar y manipular la Notación de Insignias de Grupo de Habbo (HGBN), que puede usarse en tareas como el desarrollo de software interoperable, emuladores y documentación para proyectos de fans. El público también incluye científicos de datos que puedan utilizar esta notación en investigaciones o análisis relacionados con imágenes. Se recomienda, pero no es obligatorio, familiaridad con conceptos básicos de programación, manipulación de cadenas y manipulación de imágenes.
 
 ---
 
@@ -66,15 +66,15 @@ Las palabras clave "DEBE", "NO DEBE", "OBLIGATORIO", "DEBERÁ", "NO DEBERÁ", "R
 
 Una implementación se considera conforme con HGBN v1.1 si sigue la sintaxis, las reglas de procesamiento y las restricciones definidas en este documento. Un analizador (parser) conforme:
 
-- **DEBE** soportar al menos un segmento base seguido de uno o más segmentos de símbolo.  
-- **DEBE** rechazar cadenas de insignia que violen las reglas estructurales o las restricciones de valor.  
-- **PUEDE** extender la funcionalidad mediante extensiones no oficiales, siempre que **NO INTERFIERAN** con la conformidad central.  
+- **DEBE** soportar al menos un segmento base seguido de uno o más segmentos de símbolo.
+- **DEBE** rechazar cadenas de insignia que violen las reglas estructurales o las restricciones de valor.
+- **PUEDE** extender la funcionalidad mediante extensiones no oficiales, siempre que **NO INTERFIERAN** con la conformidad central.
 
 Una cadena HGBN válida **DEBE**:
 
-1. Seguir la definición de sintaxis en la [Sección 5](#5-definición-de-sintaxis).  
-2. Utilizar el formato de datos correcto (identificadores de segmento, números de longitud fija y dígitos de posición).  
-3. Asegurar que los asset IDs y los color IDs tengan exactamente dos dígitos cada uno, y que la posición sea un único dígito que represente un valor en una cuadrícula 3×3.  
+1. Seguir la definición de sintaxis en la [Sección 5](#5-definición-de-sintaxis).
+2. Utilizar el formato de datos correcto (identificadores de segmento, números de longitud fija y dígitos de posición).
+3. Asegurar que los asset IDs y los color IDs tengan exactamente dos dígitos cada uno, y que la posición sea un único dígito que represente un valor en una cuadrícula 3×3.
 
 ---
 
@@ -84,7 +84,7 @@ Una cadena HGBN válida **DEBE**:
 
 Una cadena HGBN v1 representa un emblema completo concatenando múltiples segmentos de seis caracteres. La cadena siempre comienza con el recurso que debe estar en la base (identificado por `b`), seguido por los recursos superiores (símbolos, identificados por `s` o `t`).
 
-> ![NOTE]  
+> [!NOTE]
 > El hash final en el nombre de archivo (por ejemplo, `b01bfc395d8c4be707922c3da5b3f561`) probablemente se usa para caché y seguridad de imágenes, y **se IGNORA en la especificación de notación**.
 
 ### **5.2. Gramática**
@@ -126,15 +126,15 @@ La siguiente expresión regular puede usarse para validar la estructura general 
 
 ### **6.1. Semántica de Composición de Insignias**
 
-- El **segmento base** es la base de la insignia y **DEBE** aparecer como el primer segmento.  
-- Los **segmentos de símbolo** **DEBEN** superponerse sobre el segmento base en el orden en que aparecen en la cadena.  
-- El orden de los símbolos afecta la renderización, ya que los símbolos anteriores pueden aparecer debajo de los posteriores.  
+- El **segmento base** es la base de la insignia y **DEBE** aparecer como el primer segmento.
+- Los **segmentos de símbolo** **DEBEN** superponerse sobre el segmento base en el orden en que aparecen en la cadena.
+- El orden de los símbolos afecta la renderización, ya que los símbolos anteriores pueden aparecer debajo de los posteriores.
 
 ### **6.2. Consideraciones de Renderización**
 
-- El **assetId** corresponde a un recurso de imagen específico almacenado en el sistema.  
-- El **colorId** indica cómo se debe teñir la imagen del recurso. Las porciones no coloreables (máscara) del recurso permanecen sin cambios.  
-- El valor de **posición**, dentro de una cuadrícula 3×3 (posiciones 0–8), determina dónde se coloca el recurso. Las implementaciones **DEBEN** renderizar el recurso en la celda correspondiente de la cuadrícula. El recurso **NO DEBE** desbordar el área de la insignia.  
+- El **assetId** corresponde a un recurso de imagen específico almacenado en el sistema.
+- El **colorId** indica cómo se debe teñir la imagen del recurso. Las porciones no coloreables (máscara) del recurso permanecen sin cambios.
+- El valor de **posición**, dentro de una cuadrícula 3×3 (posiciones 0–8), determina dónde se coloca el recurso. Las implementaciones **DEBEN** renderizar el recurso en la celda correspondiente de la cuadrícula. El recurso **NO DEBE** desbordar el área de la insignia.
 
 ### **6.3. Manejo de Errores**
 
@@ -145,7 +145,7 @@ La siguiente expresión regular puede usarse para validar la estructura general 
 | **ERR_INVALID_POSITION**    | `position` no es un dígito entre 0 y 8.                       |
 | **ERR_SYNTAX**              | Falta segmentos o delimitadores requeridos en la cadena.      |
 
-Un parser conforme con HGBN **DEBE** rechazar cadenas inválidas y reportar el error apropiado.  
+Un parser conforme con HGBN **DEBE** rechazar cadenas inválidas y reportar el error apropiado.
 
 ---
 
@@ -196,11 +196,11 @@ b12063s78110t00118t27114
 
 Posibles extensiones futuras de HGBN **PUEDEN** incluir:
 
-1. **Tipos de Segmento Adicionales:** Más identificadores además de `b`, `s` y `t` para soportar nuevas funcionalidades.  
-2. **Intervalos Expandibles:** Extensión de los rangos de asset IDs o color IDs para futuros diseños visuales.  
-3. **Mejoras Posicionales:** Definición de posicionamientos más granulares o prioridades de superposición más allá de la cuadrícula básica 3×3.  
+1. **Tipos de Segmento Adicionales:** Más identificadores además de `b`, `s` y `t` para soportar nuevas funcionalidades.
+2. **Intervalos Expandibles:** Extensión de los rangos de asset IDs o color IDs para futuros diseños visuales.
+3. **Mejoras Posicionales:** Definición de posicionamientos más granulares o prioridades de superposición más allá de la cuadrícula básica 3×3.
 
-Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y la retrocompatibilidad **PUEDEN** mantenerse cuando sea posible.  
+Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y la retrocompatibilidad **PUEDEN** mantenerse cuando sea posible.
 
 ---
 
@@ -208,11 +208,11 @@ Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y l
 
 Aunque HGBN es una notación textual y **no ejecuta código**, las implementaciones **DEBEN** sanitizar y validar rigurosamente las cadenas de entrada para prevenir:
 
-- Desbordamientos de búfer  
-- Ataques de inyección  
-- Renderización incorrecta debido a entradas malformadas  
+- Desbordamientos de búfer
+- Ataques de inyección
+- Renderización incorrecta debido a entradas malformadas
 
-La estricta adherencia a la sintaxis y a las directrices de procesamiento es requerida para una implementación segura.  
+La estricta adherencia a la sintaxis y a las directrices de procesamiento es requerida para una implementación segura.
 
 ---
 
@@ -461,20 +461,22 @@ Las siguientes tablas enumeran los mapeos de activos aprobados. Los implementado
 
 ## **12. Referencias**
 
-- *[API de Grupos Habbo](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)*  
-- *[Servicio de Renderizado de Insignias de Grupo Habbo](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png)* (también disponible en `.gif` y vía `badge-fill` para fondo no transparente)  
+- *[API de Grupos Habbo](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)*
+- *[Servicio de Renderizado de Insignias de Grupo Habbo](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png)* (también disponible en `.gif` y vía `badge-fill` para fondo no transparente)
 
 ---
 
 ### **Registro de Cambios**
 
-- **v1.1.0 – 2025‑04‑12**  
-  - Actualización desde `v1.0` con nueva información encontrada.  
-  - Llenado de las tablas de referencia.  
-  - Corrección de los IDs de posición con índice cero.  
-  - Ajustes menores del borrador.  
-- **v1.1.1 – 2025‑04‑17**  
-  - Estandarización de la estructura de la especificación.  
-  - Ajustes menores del borrador.  
-- **v1.1.2 – 2025‑04‑18**  
-  - Correcciones gramaticales menores.  
+- **v1.1.0 – 2025‑04‑12**
+  - Actualización desde `v1.0` con nueva información encontrada.
+  - Llenado de las tablas de referencia.
+  - Corrección de los IDs de posición con índice cero.
+  - Ajustes menores del borrador.
+- **v1.1.1 – 2025‑04‑17**
+  - Estandarización de la estructura de la especificación.
+  - Ajustes menores del borrador.
+- **v1.1.2 – 2025‑04‑18**
+  - Correcciones gramaticales menores.
+- **v1.1.3 - 2025-05-02**
+  - Corrección de la etiqueta de alerta de Markdown.

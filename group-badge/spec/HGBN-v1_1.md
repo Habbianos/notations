@@ -81,7 +81,7 @@ A valid HGBN string **MUST**:
 
 A HGBN v1 string represents a complete badge by concatenating multiple six-character segments. The string is always ordered starting with the asset that should be at the bottom (base, identified by `b`), followed by the assets on top (symbols, identified by `s` or `t`).
 
-> ![NOTE]
+> [!NOTE]
 > The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**.
 
 ### **5.2. Grammar**
@@ -477,3 +477,5 @@ The following tables list the approved asset mappings. Implementers and develope
   - Minor touches of the draft.
 - **v1.1.2 - 2025-04-18**
   - Minor grammar fixes.
+- **v1.1.3 - 2025-05-02**
+  - Markdown Alert tag fix.
