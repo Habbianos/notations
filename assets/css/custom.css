@@ -1,3 +1,7 @@
+* {
+	text-shadow: 1px 1px white, 2px 2px white;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -6,6 +10,8 @@ body {
 	background-repeat: repeat, no-repeat;
 	background-position: top center;
 	background-color: #efefef;
+	background-attachment: fixed, scroll;
+	color: #404040;
 }
 
 header h1 img {
