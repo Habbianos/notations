@@ -226,6 +226,7 @@ This document was developed with contributions from:
 
 - **[Alisson Nunes, "alynva"](https://alynva.com)**: Lead author
 - **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigation
+- **["uzuki"](https://x.com/uzukies)**: Writing (Review & Editing)
 
 ---
 

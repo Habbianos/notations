@@ -15,42 +15,42 @@
 
 ### **1.1. Resumen**
 
-**Habbo Group Badge Notation (HGBN) v1** es un estándar para la notación basada en texto diseñado para representar **insignias de grupo dentro del ecosistema Habbo**. HGBN codifica datos estructurados de insignias como una única cadena compuesta por múltiples segmentos de seis caracteres. Cada segmento define ya sea un recurso de imagen base o una superposición de símbolo, incluyendo datos sobre el ID del recurso, el ID de color y su posición en una cuadrícula 3×3.
+**Habbo Group Badge Notation (HGBN) v1** es un estándar para la notación basada en texto diseñado para representar **placas de grupo dentro del ecosistema Habbo**. HGBN codifica datos estructurados de insignias como una única string compuesta por múltiples segmentos de seis caracteres. Cada segmento define ya sea un recurso de imagen base o una superposición de símbolo, incluyendo datos sobre el ID del recurso, el ID de color y su posición en una cuadrícula 3×3.
 
-Aunque HGBN v1 refleja la definición actual del diseño de insignias, **no es un formato oficial mantenido por Sulake**, y futuras actualizaciones o extensiones **PUEDEN NO** ser adoptadas por la empresa.
+Aunque HGBN v1 refleja la definición actual del diseño de insignias, **no es un formato oficial mantenido por Sulake**, y futuras actualizaciones o extensiones **PODRIAN NO** ser adoptadas por la empresa.
 
 <div align="center">
-  <img src="../img/editor-new.png" alt="Insignia de ejemplo">
+  <img src="../img/editor-new.png" alt="Placa de ejemplo">
 </div>
 
 ### **1.2. Alcance y Objetivo**
 
 #### **1.2.1. Este Documento**
 
-Esta especificación existe para formalizar y documentar cómo Habbo Hotel procesa **componentes de insignias de grupo**. Está dirigida a:
+Esta especificación existe para formalizar y documentar cómo Habbo Hotel procesa los **componentes de placas de grupo**. Está dirigida a:
 
 - **Una especificación no oficial**, lo que significa que Sulake puede no adoptar las actualizaciones.
-- **Destinada a documentación e interoperabilidad**, permitiendo que desarrolladores analicen, generen y manipulen insignias de grupo fuera del juego.
+- **Destinada a documentación e interoperabilidad**, permitiendo que desarrolladores analicen, generen y manipulen placas de grupo fuera del juego.
 
-HGBN **no es un estándar mantenido por Sulake**, y sus extensiones futuras **PUEDEN NO** reflejarse en la implementación del juego.
+HGBN **no es un estándar mantenido por Sulake**, y sus extensiones futuras **PODRIAN NO** reflejarse en la implementación del juego.
 
 #### **1.2.2. La Notación**
 
 HGBN v1 es una representación textual de símbolos en capas diseñada para:
 
-- **Almacenar configuraciones de insignias** como una cadena de texto compacta
+- **Almacenar configuraciones de insignias** como una string de texto compacta
 - **Análisis y generación programática** por desarrolladores e investigadores
-- Facilitar la **interoperabilidad** de herramientas que representen, manipulen o analicen insignias de grupo de Habbo
+- Facilitar la **interoperabilidad** de herramientas que representen, manipulen o analicen placas de grupo de Habbo
 
 ### **1.3. Audiencia**
 
-Esta especificación está dirigida a desarrolladores, investigadores, archivistas y entusiastas de la comunidad de Habbo Hotel, particularmente aquellos que trabajan en herramientas para insignias de grupo de Habbo. También sirve como referencia común para comprender, implementar y manipular la Notación de Insignias de Grupo de Habbo (HGBN), que puede usarse en tareas como el desarrollo de software interoperable, emuladores y documentación para proyectos de fans. El público también incluye científicos de datos que puedan utilizar esta notación en investigaciones o análisis relacionados con imágenes. Se recomienda, pero no es obligatorio, familiaridad con conceptos básicos de programación, manipulación de cadenas y manipulación de imágenes.
+Esta especificación está dirigida a desarrolladores, investigadores, archivistas y entusiastas de la comunidad de Habbo Hotel, particularmente aquellos que trabajan en herramientas para placas de grupo de Habbo. También sirve como referencia común para comprender, implementar y manipular la Notación de Placas de Grupo de Habbo (HGBN), que puede usarse en tareas como el desarrollo de software interoperable, emuladores y documentación para proyectos de fansites. El público también incluye científicos de datos que puedan utilizar esta notación en investigaciones o análisis relacionados con imágenes. Se recomienda, pero no es obligatorio, familiaridad con conceptos básicos de programación, manipulación de strings y manipulación de imágenes.
 
 ---
 
 ## **2. Estado de este Documento**
 
-HGBN v1.1 define la estructura actualmente conocida de cómo se almacenan los diseños de insignias de grupo, basada en la implementación original en Habbo Hotel.
+HGBN v1.1 define la estructura actualmente conocida de cómo se almacenan los diseños de placas de grupo, basada en la implementación original en Habbo Hotel.
 
 HGBN es **mantenido por la comunidad**. Aunque se realizan esfuerzos para garantizar la precisión, Sulake puede cambiar el formato en cualquier momento. Futuras extensiones intentarán preservar la retrocompatibilidad siempre que sea posible.
 
@@ -64,25 +64,25 @@ Las palabras clave "DEBE", "NO DEBE", "OBLIGATORIO", "DEBERÁ", "NO DEBERÁ", "R
 
 ## **4. Conformidad**
 
-Una implementación se considera conforme con HGBN v1.1 si sigue la sintaxis, las reglas de procesamiento y las restricciones definidas en este documento. Un analizador (parser) conforme:
+Una implementación se considera conforme con HGBN v1.1 si se adhiere a la syntax, las reglas de procesamiento y las restricciones definidas en este documento. Un analizador (parser) conforme:
 
 - **DEBE** soportar al menos un segmento base seguido de uno o más segmentos de símbolo.
-- **DEBE** rechazar cadenas de insignia que violen las reglas estructurales o las restricciones de valor.
-- **PUEDE** extender la funcionalidad mediante extensiones no oficiales, siempre que **NO INTERFIERAN** con la conformidad central.
+- **DEBE** rechazar strings de placas que violen las reglas estructurales o las restricciones de valor.
+- **PODRIA** extender la funcionalidad mediante extensiones no oficiales, siempre que NO INTERFIERAN con la conformidad central.
 
-Una cadena HGBN válida **DEBE**:
+Una string HGBN válida **DEBE**:
 
-1. Seguir la definición de sintaxis en la [Sección 5](#5-definición-de-sintaxis).
+1. Seguir la definición de syntax en la [Sección 5](#5-definición-de-syntax).
 2. Utilizar el formato de datos correcto (identificadores de segmento, números de longitud fija y dígitos de posición).
 3. Asegurar que los asset IDs y los color IDs tengan exactamente dos dígitos cada uno, y que la posición sea un único dígito que represente un valor en una cuadrícula 3×3.
 
 ---
 
-## **5. Definición de Sintaxis**
+## **5. Definición de Syntax**
 
 ### **5.1. Visión General**
 
-Una cadena HGBN v1 representa un emblema completo concatenando múltiples segmentos de seis caracteres. La cadena siempre comienza con el recurso que debe estar en la base (identificado por `b`), seguido por los recursos superiores (símbolos, identificados por `s` o `t`).
+Cada string HGBN v1 representa un emblema completo concatenando múltiples segmentos de seis caracteres. La string siempre comienza con el recurso que debe estar en la base (identificado por `b`), seguido por los recursos superiores (símbolos, identificados por `s` o `t`).
 
 > [!NOTE] Nota
 > El hash final en el nombre de archivo (por ejemplo, `b01bfc395d8c4be707922c3da5b3f561`) probablemente se usa para caché y seguridad de imágenes, y **se IGNORA en la especificación de notación**.
@@ -114,7 +114,7 @@ La siguiente Forma de Backus‑Naur Extendida (EBNF) define la sintaxis de HGBN 
 
 ### **5.4. Expresión Regular (Simplificada)**
 
-La siguiente expresión regular puede usarse para validar la estructura general de una cadena HGBN v1.1:
+La siguiente expresión regular puede usarse para validar la estructura general de una string HGBN v1.1:
 
 ```regex
 /^(b\d{2}\d{2}[0-8])((s|t)\d{2}\d{2}[0-8]){0,4}$/
@@ -126,8 +126,8 @@ La siguiente expresión regular puede usarse para validar la estructura general 
 
 ### **6.1. Semántica de Composición de Insignias**
 
-- El **segmento base** es la base de la insignia y **DEBE** aparecer como el primer segmento.
-- Los **segmentos de símbolo** **DEBEN** superponerse sobre el segmento base en el orden en que aparecen en la cadena.
+- El **segmento base** es la base de la placa y **DEBE** aparecer como el primer segmento.
+- Los **segmentos de símbolo** **DEBEN** superponerse sobre el segmento base en el orden en que aparecen en la string.
 - El orden de los símbolos afecta la renderización, ya que los símbolos anteriores pueden aparecer debajo de los posteriores.
 
 ### **6.2. Consideraciones de Renderización**
@@ -145,15 +145,15 @@ La siguiente expresión regular puede usarse para validar la estructura general 
 | **ERR_INVALID_POSITION**    | `position` no es un dígito entre 0 y 8.                       |
 | **ERR_SYNTAX**              | Falta segmentos o delimitadores requeridos en la cadena.      |
 
-Un parser conforme con HGBN **DEBE** rechazar cadenas inválidas y reportar el error apropiado.
+Un parser conforme con HGBN **DEBE** rechazar strings inválidas y reportar el error apropiado.
 
 ---
 
-## **7. Ejemplaciones**
+## **7. Ejemplos de Entradas**
 
 ### **7.1. Ejemplo Básico**
 
-Considere la siguiente cadena HGBN v1.1 (sin el hash final):
+Considere la siguiente string HGBN v1.1 (sin el hash final):
 
 ```txt
 b12134s47114s46114s48114s45114
@@ -200,26 +200,26 @@ Posibles extensiones futuras de HGBN **PUEDEN** incluir:
 2. **Intervalos Expandibles:** Extensión de los rangos de asset IDs o color IDs para futuros diseños visuales.
 3. **Mejoras Posicionales:** Definición de posicionamientos más granulares o prioridades de superposición más allá de la cuadrícula básica 3×3.
 
-Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y la retrocompatibilidad **PUEDEN** mantenerse cuando sea posible.
+Las revisiones de la especificación **DEBERÁN** versionarse adecuadamente, y la retrocompatibilidad **DEBERIA** mantenerse cuando sea posible.
 
 ---
 
 ## **9. Consideraciones de Seguridad**
 
-Aunque HGBN es una notación textual y **no ejecuta código**, las implementaciones **DEBEN** sanitizar y validar rigurosamente las cadenas de entrada para prevenir:
+Aunque HGBN es una notación textual y **no ejecuta código**, las implementaciones **DEBEN** sanitizar y validar rigurosamente las strings de entrada para prevenir:
 
 - Desbordamientos de búfer
 - Ataques de inyección
 - Renderización incorrecta debido a entradas malformadas
 
-La estricta adherencia a la sintaxis y a las directrices de procesamiento es requerida para una implementación segura.
+La estricta adherencia a la syntax y a las directrices de procesamiento es requerida para una implementación segura.
 
 ---
 
 ## **10. Referencias**
 
 - [1] *API de Grupos de Habbo*, Habbo.com.br. Disponible en: [https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
-- [2] *Servicio de Renderizado de Insignias de Grupo de Habbo*, Habbo.com.br. Disponible en: [https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (también disponible en formato `.gif` y mediante la variante `badge-fill` para fondos no transparentes)
+- [2] *Servicio de Renderizado de Placas de Grupo de Habbo*, Habbo.com.br. Disponible en: [https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (también disponible en formato `.gif` y mediante la variante `badge-fill` para fondos no transparentes)
 
 ---
 
@@ -229,6 +229,7 @@ Este documento fue desarrollado con contribuciones de:
 
 - **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
 - **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigación
+- **["uzuki"](https://x.com/uzukies)**: Escritura (Revisión y Edición)
 
 ---
 

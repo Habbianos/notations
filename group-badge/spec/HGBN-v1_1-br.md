@@ -229,6 +229,7 @@ Este documento foi desenvolvido com contribuições de:
 
 - **[Alisson Nunes, "alynva"](https://alynva.com)**: Autor principal
 - **[Matheus, "ferrazmatheus"](https://x.com/ImFerraz_)**: Investigação
+- **["uzuki"](https://x.com/uzukies)**: Escrita (Revisão e Edição)
 
 ---
 
