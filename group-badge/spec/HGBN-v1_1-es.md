@@ -85,7 +85,7 @@ Una string HGBN válida **DEBE**:
 Cada string HGBN v1 representa un emblema completo concatenando múltiples segmentos de seis caracteres. La string siempre comienza con el recurso que debe estar en la base (identificado por `b`), seguido por los recursos superiores (símbolos, identificados por `s` o `t`).
 
 > [!NOTE] Nota
-> El hash final en el nombre de archivo (por ejemplo, `b01bfc395d8c4be707922c3da5b3f561`) probablemente se usa para caché y seguridad de imágenes, y **se IGNORA en la especificación de notación**.
+> El hash final en el nombre de archivo (por ejemplo, `b01bfc395d8c4be707922c3da5b3f561`) probablemente se usa para caché y seguridad de imágenes, y **se IGNORA en la especificación de notación**. Se crea utilizando MD5 sobre la string de notación concatenada con la constante `ef2356a4926bf225eb86c75c52309c32`.
 
 ### **5.2. Gramática**
 
@@ -220,6 +220,7 @@ La estricta adherencia a la syntax y a las directrices de procesamiento es reque
 
 - [1] *API de Grupos de Habbo*, Habbo.com.br. Disponible en: [https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
 - [2] *Servicio de Renderizado de Placas de Grupo de Habbo*, Habbo.com.br. Disponible en: [https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (también disponible en formato `.gif` y mediante la variante `badge-fill` para fondos no transparentes)
+- [3] *Group Badges – Creando un Hash*, GitHub (usuario `why`). Disponible en: [https://github.com/why/group-badges?tab=readme-ov-file#creating-a-hash](https://github.com/why/group-badges?tab=readme-ov-file#creating-a-hash)
 
 ---
 
@@ -249,6 +250,8 @@ Este documento fue desarrollado con contribuciones de:
   - Corrección de la etiqueta de alerta de Markdown.
   - Sección de colaboradores añadidos.
   - Reorganizando las últimas secciones y renombrando la Tabla de Referencias a Apéndices.
+- **v1.1.4 - 2025-05-07**
+  - Más detalles sobre el hash.
 
 ---
 

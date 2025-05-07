@@ -82,7 +82,7 @@ A valid HGBN string **MUST**:
 A HGBN v1 string represents a complete badge by concatenating multiple six-character segments. The string is always ordered starting with the asset that should be at the bottom (base, identified by `b`), followed by the assets on top (symbols, identified by `s` or `t`).
 
 > [!NOTE]
-> The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**.
+> The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**. It is created by using **MD5** on the notation string concatenated with the constant `ef2356a4926bf225eb86c75c52309c32`.
 
 ### **5.2. Grammar**
 
@@ -217,6 +217,7 @@ Strict adherence to the syntax and processing guidelines is required for safe im
 
 - [1] *Habbo Groups API*, Habbo.com.br. Available at: [https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
 - [2] *Habbo Group Badge Render Service*, Habbo.com.br. Available at: [https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (also available in `.gif` format and through the `badge-fill` variant for non-transparent backgrounds)
+- [3] *Group Badges – Creating a Hash*, GitHub (user `why`). Available at: [https://github.com/why/group-badges?tab=readme-ov-file#creating-a-hash](https://github.com/why/group-badges?tab=readme-ov-file#creating-a-hash)
 
 ---
 
@@ -246,6 +247,8 @@ This document was developed with contributions from:
   - Markdown Alert tag fix.
   - Added Contributors Section.
   - Reorganized the last sections and renamed the Reference Table to Appendices.
+- **v1.1.4 - 2025-05-07**
+  - More details about the hash.
 
 ---
 

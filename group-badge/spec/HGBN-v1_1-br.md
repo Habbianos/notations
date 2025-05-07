@@ -85,7 +85,7 @@ Uma string HGBN válida **DEVE**:
 Uma string HGBN v1 representa um emblema completo concatenando múltiplos segmentos de seis caracteres. A string sempre começa pelo recurso base (identificado por `b`), seguido pelos símbolos sobrepostos (identificados por `s` ou `t`).
 
 > [!NOTE] Nota
-> O hash final no nome do arquivo (por exemplo, `b01bfc395d8c4be707922c3da5b3f561`) provavelmente é usado para cache de imagem e segurança e **é ignorado na especificação da notação**.
+> O hash final no nome do arquivo (por exemplo, `b01bfc395d8c4be707922c3da5b3f561`) provavelmente é usado para cache de imagem e segurança e **é ignorado na especificação da notação**. É criado usando MD5 na string da notação concatenada com a constante `ef2356a4926bf225eb86c75c52309c32`.
 
 ### **5.2. Gramática**
 
@@ -220,6 +220,7 @@ A adesão estrita à sintaxe e às diretrizes de processamento é necessária pa
 
 - [1] *API de Grupos do Habbo*, Habbo.com.br. Disponível em: [https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d](https://www.habbo.com.br/api/public/groups/g-hhbr-d5c67dd48b87d8b62f5a6a14ebbf4d8d)
 - [2] *Serviço de Renderização de Emblemas de Grupo do Habbo*, Habbo.com.br. Disponível em: [https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png](https://www.habbo.com.br/habbo-imaging/badge/b12134s47114s46114s48114s45114f6bbe1ccfa2e8dd23d17c70895929672.png) (também disponível no formato `.gif` e pela variante `badge-fill` para fundo opaco)
+- [3] *Group Badges – Criando um Hash*, GitHub (usuário `why`). Disponível em: [https://github.com/why/group-badges?tab=readme-ov-file#creating-a-hash](https://github.com/why/group-badges?tab=readme-ov-file#creating-a-hash)
 
 ---
 
@@ -249,6 +250,8 @@ Este documento foi desenvolvido com contribuições de:
   - Correção da tag Alerta de Markdown.
   - Seção de Colaboradores Adicionada.
   - Reorganização das últimas seções e renomeação da Tabela de Referência para Apêndices.
+- **v1.1.4 - 2025-05-07**
+  - Mais detalhes sobre o hash.
 
 ---
 

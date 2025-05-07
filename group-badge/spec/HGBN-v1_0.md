@@ -82,7 +82,7 @@ A valid HGBN string **MUST**:
 A HGBN v1 string represents a complete badge by concatenating multiple six-character segments. The string is always ordered starting with the asset that should be at the bottom (base, identified by `b`), followed by the assets on top (symbols, identified by `s`).
 
 > [!NOTE]
-> The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**.
+> The trailing hash in the file name (e.g., `b01bfc395d8c4be707922c3da5b3f561`) is probably used for image caching and security and is **ignored in the notation specification**. It is created by using **MD5** on the notation string concatenated with the constant `ef2356a4926bf225eb86c75c52309c32`.
 
 ### **5.2. Grammar**
 
@@ -248,6 +248,7 @@ Strict adherence to the syntax and processing guidelines is required for safe im
 - *[Archived Habbo Home of `Kinas` from `hhbr`](https://web.archive.org/web/20071202125328/http://www.habbo.com.br/home/Kinas)*
 - *[Archived Group Page of `puppaplaah` from `hhbr`](https://web.archive.org/web/20070528063549/http://www.habbo.com.br:80/groups/2/id)*
 - *[Habbo Group Badge Render Service](https://www.habbo.com.br/habbo-imaging/badge/s44114s04115s04113s050748b83f03d75ff6d0821178373f43bde29.png) (also avaliable as `.gif` and from `badge-fill` for non-transparent background)*
+- *[GitHub Repo `why/group-badges`](https://github.com/why/group-badges?tab=readme-ov-file)*
 
 ---
 
@@ -264,3 +265,5 @@ Strict adherence to the syntax and processing guidelines is required for safe im
   - Minor grammar fixes.
 - **v1.0.4 - 2025-05-02**
   - Markdown Alert tag fix.
+- **v1.0.5 - 2025-05-07**
+  - More details about the hash.
